@@ -1,0 +1,110 @@
+.line-up
+  &__header
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+  &__title
+    color: white
+    font-size: 80px
+    font-weight: 400
+    line-height: 150%
+    letter-spacing: -1.76px
+    text-transform: uppercase
+    margin-bottom: 17px
+  &__tabs
+    margin-bottom: 36px
+    display: flex
+    gap: 40px
+    &-link
+      width: 202px
+      text-align: center
+      font-family: "Source Code Pro", sans-serif
+      font-size: 18px
+      font-weight: 700
+      line-height: 150%
+      letter-spacing: -0.396px
+      text-transform: uppercase
+      text-decoration: none
+      color: white
+      padding: 12px
+      border: 3px solid white
+      &--active
+        background-color: white
+        color: #000
+  &__body
+    border-top: 4px solid white
+    display: flex
+    align-items: flex-start
+    gap: 20px
+  &__animation
+    width: 504px
+    height: 658px
+    flex-basis: 70%
+  &__slide
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    &[data-slide="1"]
+      background-image: url("../images/slides-lineup/first.png")
+    &[data-slide="2"]
+      background-image: url("../images/slides-lineup/second.png")
+    &[data-slide="3"]
+      background-image: url("../images/slides-lineup/third.png")
+    &[data-slide="4"]
+      background-image: url("../images/slides-lineup/fourth.png")
+    &[data-slide="5"]
+      background-image: url("../images/slides-lineup/fifth.png")
+  &__content
+    flex-basis: 100%
+    max-height: 658px
+    overflow: auto
+  &__card
+    display: block
+    font-family: "Source Code Pro", sans-serif
+    color: white
+    text-decoration: none
+    font-size: 18px
+    font-weight: 500
+    line-height: 150%
+    letter-spacing: -0.396px
+    text-transform: uppercase
+    border-bottom: 3px solid white
+    &-header
+      display: flex
+      padding: 18.5px 0
+      justify-content: space-between
+    &-content
+      max-width: 443px
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 16px
+    &-block
+      max-width: 443px
+      width: 100%
+      display: flex
+      justify-content: space-between
+    &-desc
+      font-size: 15px
+      font-family: "Source Code Pro", sans-serif
+      font-weight: 500
+      line-height: 125%
+      letter-spacing: -0.33px
+      text-transform: none
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)
+      transition: all 0.3s ease-in-out
+      &.hidden
+        opacity: 0
+        visibility: hidden
+        display: none
+        transform: translateY(-20px)
+    &-triangle
+      transform: rotate(0)
+      transition: all 0.3s ease-in-out
+      &.active
+        transform: rotate(180deg)

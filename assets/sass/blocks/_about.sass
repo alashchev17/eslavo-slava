@@ -1,0 +1,36 @@
+.about
+  position: relative
+  margin-bottom: 150px
+  &::before
+    content: ''
+    position: absolute
+    height: calc(100% -  138px)
+    width: 100%
+    background-color: $secondary-accent-color
+    z-index: -1
+    top: 50%
+    transform: translateY(-50%)
+  &__content
+    border-top: 4px solid white
+    padding: 46px 100px 111px 100px
+    color: white
+    background-color: $secondary-accent-color
+  &__title
+    text-align: center
+    font-weight: 400
+    font-size: 80px
+    line-height: 150%
+    letter-spacing: -1.76px
+    text-transform: uppercase
+    margin-bottom: 38px
+  &__desc
+    font-family: "Source Code Pro", sans-serif
+    font-weight: 400
+    text-align: justify
+    font-size: 16px
+    line-height: 150%
+    letter-spacing: -0.3px
+    &:not(:last-child)
+      margin-bottom: 38px
+  &__strong
+    font-weight: 700
