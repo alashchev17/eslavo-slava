@@ -10,49 +10,22 @@ const classes = {
   fifth: "--fifth",
   sixth: "--sixth"
 }
+setTimeout(() => {
+  preloaderInfo.classList.toggle("preloader__info--active"); 
+}, 500);
 
-function animationHandler(heroSlide) {
-  if (heroSlide.dataset.slide == 1) {
-    heroSlide.dataset.slide = 2;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.first);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.second);
+function slidesHandler(slider, initial, amount) {
+  if (initial != amount) {
+    slider.dataset.slide = (initial + 1);
+    initial++;
     setTimeout(() => {
-      animationHandler(heroSlide);
+      slidesHandler(slider, initial, amount);
     }, 1000);
-  } else if (heroSlide.dataset.slide == 2) {
-    heroSlide.dataset.slide = 3;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.second);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.third);
+  } else {
+    initial = 1;
+    slider.dataset.slide = initial;
     setTimeout(() => {
-      animationHandler(heroSlide);
-    }, 1000);
-  } else if (heroSlide.dataset.slide == 3) {
-    heroSlide.dataset.slide = 4;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.third);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.fourth);
-    setTimeout(() => {
-      animationHandler(heroSlide);
-    }, 1000);
-  } else if (heroSlide.dataset.slide == 4) {
-    heroSlide.dataset.slide = 5;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.fourth);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.fifth);
-    setTimeout(() => {
-      animationHandler(heroSlide);
-    }, 1000);
-  } else if (heroSlide.dataset.slide == 5) {
-    heroSlide.dataset.slide = 6;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.fifth);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.sixth);
-    setTimeout(() => {
-      animationHandler(heroSlide);
-    }, 1000);
-  } else if (heroSlide.dataset.slide == 6) {
-    heroSlide.dataset.slide = 1;
-    heroSlide.classList.remove(heroSlide.classList[0] + classes.sixth);
-    heroSlide.classList.add(heroSlide.classList[0] + classes.first);
-    setTimeout(() => {
-      animationHandler(heroSlide);
+      slidesHandler(slider, initial, amount);
     }, 1000);
   }
 }
@@ -61,23 +34,20 @@ document.body.style.overflow = "hidden";
 
 window.onload = () => {
   setTimeout(() => {
-    preloaderInfo.classList.toggle("preloader__info--active"); 
+    preloaderInfo.classList.toggle("preloader__info--active");
     setTimeout(() => {
+      preloaderInfo.textContent = "Welcome!";
       preloaderInfo.classList.toggle("preloader__info--active");
+    }, 150);
+    setTimeout(() => {
+      preloader.classList.add("preloader--hidden");
       setTimeout(() => {
-        preloaderInfo.textContent = "Content loaded!";
-        preloaderInfo.classList.toggle("preloader__info--active");
-      }, 150);
-      setTimeout(() => {
-        preloader.classList.add("preloader--hidden");
+        preloader.remove();
+        document.body.style.overflow = "auto";
         setTimeout(() => {
-          preloader.remove();
-          document.body.style.overflow = "auto";
-          setTimeout(() => {
-            animationHandler(heroSlide);
-          }, 1000);
-        }, 150);
-      }, 1500);
+          slidesHandler(heroSlide, 1, 6);
+        }, 1000);
+      }, 150);
     }, 1500);
-  }, 1000);
+  }, 1500);
 }
