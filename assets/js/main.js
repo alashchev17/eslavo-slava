@@ -1,16 +1,9 @@
-const heroSlide = document.querySelector(".animation__slide"),
-      lineUpSlide = document.querySelector(".line-up__slide");
+const heroSlide = document.querySelector(".animation__slide");
+const lineUpSlide = document.querySelector(".line-up__slide");
 const preloader = document.querySelector(".preloader");
 const preloaderInfo = document.querySelector(".preloader__info");
+let TOP_OFFSET = -94;
 
-const classes = {
-  first: "--first",
-  second: "--second",
-  third: "--third",
-  fourth: "--fourth",
-  fifth: "--fifth",
-  sixth: "--sixth"
-}
 setTimeout(() => {
   preloaderInfo.classList.toggle("preloader__info--active"); 
 }, 500);
@@ -59,24 +52,79 @@ const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (event) {
     event.preventDefault();
-    
     const blockID = anchor.getAttribute('href');
-    
-    document.querySelector(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
+    console.log(blockID);
+    const element = document.querySelector(blockID);
+    if (blockID == "#about") {
+      TOP_OFFSET = -160;
+    } else {
+      TOP_OFFSET = -94;
+    }
+    const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
+
+    window.scrollTo({
+      top: y, 
+      behavior: 'smooth'
     });
+    // document.querySelector(blockID).scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'start'
+    // });
   });
 }
 
-const lineUpCards = document.querySelectorAll(".line-up__card");
-const lineUpTriangles = document.querySelectorAll(".line-up__card-triangle");
-const lineUpDescs = document.querySelectorAll(".line-up__card-desc");
+/****************************** TABS ******************************/
+
+const tabsButtons = [].slice.call(document.querySelectorAll(".line-up__tabs-link"));
+const tabs = [].slice.call(document.querySelectorAll(".line-up__tab"));
+const lineUpCards = [].slice.call(document.querySelectorAll(".line-up__card"));
+const lineUpCardsDescs = [].slice.call(document.querySelectorAll(".line-up__card-desc"));
+
+
+tabsButtons.forEach((item, index) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+    const activeButtons = tabsButtons.filter(activeButton => activeButton.classList.contains("active"));
+    const activeTabs = tabs.filter(activeTab => activeTab.classList.contains("active"));
+    const activeCards =  lineUpCards.filter(activeCard => activeCard.classList.contains("active"));
+    const activeDescs = lineUpCardsDescs.filter(activeDesc => activeDesc.classList.contains("active"));
+
+    activeCards.forEach(item => {
+      item.classList.remove("active");
+    });
+    activeDescs.forEach(item => {
+      item.classList.remove("active");
+      item.classList.add("hidden");
+      item.classList.add("dnone");
+    });
+    activeButtons.forEach(item => {
+      item.classList.remove("active");
+    });
+    activeTabs.forEach(item => {
+      item.classList.remove("active");
+    });
+    item.classList.toggle("active");
+    tabs[index].classList.toggle("active");
+
+  });
+});
 
 lineUpCards.forEach((item, index) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
-    lineUpTriangles[index].classList.toggle("active");
-    lineUpDescs[index].classList.toggle("hidden");
+    item.classList.toggle("active");
+    if (lineUpCardsDescs[index].classList.contains("active")) {
+      lineUpCardsDescs[index].classList.toggle("active");
+      lineUpCardsDescs[index].classList.toggle("hidden");
+      setTimeout(() => {
+        lineUpCardsDescs[index].classList.toggle("dnone")
+      }, 300);
+    } else {
+      lineUpCardsDescs[index].classList.toggle("dnone")
+      setTimeout(() => {
+        lineUpCardsDescs[index].classList.toggle("hidden");
+        lineUpCardsDescs[index].classList.toggle("active");
+      }, 300);
+    }
   });
 });

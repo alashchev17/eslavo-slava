@@ -1,4 +1,5 @@
 .line-up
+  margin-bottom: 230px
   &__header
     display: flex
     align-items: flex-end
@@ -28,7 +29,7 @@
       color: white
       padding: 12px
       border: 3px solid white
-      &--active
+      &.active
         background-color: white
         color: #000
   &__body
@@ -38,7 +39,7 @@
     gap: 20px
   &__animation
     width: 504px
-    height: 658px
+    height: 670px
     flex-basis: 70%
   &__slide
     width: 100%
@@ -58,7 +59,7 @@
       background-image: url("../images/slides-lineup/fifth.png")
   &__content
     flex-basis: 100%
-    max-height: 658px
+    max-height: 670px
     overflow: auto
   &__card
     display: block
@@ -69,8 +70,12 @@
     font-weight: 500
     line-height: 150%
     letter-spacing: -0.396px
+    padding: 0 15px 0 0
     text-transform: uppercase
     border-bottom: 3px solid white
+    &.active
+      .line-up__card-triangle
+        transform: rotate(180deg)
     &-header
       display: flex
       padding: 18.5px 0
@@ -94,17 +99,22 @@
       line-height: 125%
       letter-spacing: -0.33px
       text-transform: none
-      opacity: 1
-      visibility: visible
-      transform: translateY(0)
       transition: all 0.3s ease-in-out
+      &.active
+        display: block
+        opacity: 1
+        visibility: visible
+        transform: translate(0)
+      &.dnone
+        display: none
       &.hidden
         opacity: 0
         visibility: hidden
-        display: none
         transform: translateY(-20px)
     &-triangle
       transform: rotate(0)
       transition: all 0.3s ease-in-out
-      &.active
-        transform: rotate(180deg)
+  &__tab
+    display: none
+    &.active
+      display: block
