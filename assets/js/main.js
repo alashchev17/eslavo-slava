@@ -1,5 +1,7 @@
-const heroSlide = document.querySelector(".animation__slide");
-const lineUpSlide = document.querySelector(".line-up__slide");
+/****************************** Animations ******************************/
+const heroSlide = document.querySelector(".hero__animation-slide");
+const lineUpSlide = document.querySelector(".line-up__animation-slide");
+const ticketsSlide = document.querySelector(".tickets__animation-slide");
 const preloader = document.querySelector(".preloader");
 const preloaderInfo = document.querySelector(".preloader__info");
 let TOP_OFFSET = -94;
@@ -41,6 +43,7 @@ window.onload = () => {
         setTimeout(() => {
           slidesHandler(heroSlide, 1, 6);
           slidesHandler(lineUpSlide, 1, 5);
+          slidesHandler(ticketsSlide, 1, 2);
         }, 1000);
       }, 150);
     }, 1500);
@@ -57,6 +60,12 @@ for (let anchor of anchors) {
     const element = document.querySelector(blockID);
     if (blockID == "#about") {
       TOP_OFFSET = -160;
+    } else if (blockID == "#tickets") {
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+      });
+      return;
     } else {
       TOP_OFFSET = -94;
     }
@@ -66,10 +75,6 @@ for (let anchor of anchors) {
       top: y, 
       behavior: 'smooth'
     });
-    // document.querySelector(blockID).scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'start'
-    // });
   });
 }
 

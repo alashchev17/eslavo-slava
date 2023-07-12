@@ -12,7 +12,7 @@
         height: 3px
         background-color: $third-accent-color
         transform: scaleX(0)
-        transition: transform 0.15s ease-in-out
+        transition: transform 0.3s ease-in-out
       &:hover
         &::after
           transform: scaleX(100%)
@@ -29,7 +29,7 @@
         height: 1px
         background-color: $third-accent-color
         transform: scaleX(0)
-        transition: transform 0.15s ease-in-out
+        transition: transform 0.3s ease-in-out
       &:hover
         &::after
           transform: scaleX(100%)
@@ -38,7 +38,7 @@
           bottom: 1px
   .hero
     &__button
-      transition: all 0.15s ease-in-out
+      transition: all 0.3s ease-in-out
       &:hover
         border-color: #fff
       &:active
@@ -52,3 +52,18 @@
       transition: background-color 0.3s ease-in-out
       &:hover
         background-color: rgba(255, 255, 255, 0.15)
+    &__tabs
+      &-link
+        transition: all 0.3s ease-in-out
+        &.active
+          &:hover
+            background-color: #fff
+        &:hover
+          background-color: rgba(255, 255, 255, 0.15)
+  .button
+    transition: all 0.3s ease-in-out
+    &:hover
+      border-color: $fourth-accent-color
+    &:active
+      background-color: $fourth-accent-color
+      color: white
