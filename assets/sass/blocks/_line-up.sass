@@ -27,8 +27,9 @@
       &.active
         background-color: white
         color: #000
+  &__wrapper
   &__body
-    border-top: 4px solid white
+    border-top: 4px solid #ffffff
     display: flex
     align-items: flex-start
     gap: 20px
@@ -56,6 +57,13 @@
     flex-basis: 100%
     max-height: 670px
     overflow: auto
+    &::-webkit-scrollbar
+      width: 7px
+      background: linear-gradient(270deg, #ffffff 45.24%, rgba(#ffffff, 0) 45.45%)
+    &::-webkit-scrollbar-thumb 
+      background-color: #ffffff
+    &::-webkit-scrollbar-thumb:hover
+      background-color: #ffffff
   &__card
     display: block
     font-family: "Source Code Pro", sans-serif

@@ -1,0 +1,95 @@
+.artists
+  margin-bottom: 180px
+  &__wrapper
+    overflow-x: auto
+    padding-bottom: 65px
+    &::-webkit-scrollbar
+      height: 11px
+      background: linear-gradient(180deg, rgba($secondary-accent-color, 0.00) 54.44%, $secondary-accent-color 54.62%)
+    &::-webkit-scrollbar-thumb 
+      background-color: $secondary-accent-color
+    &::-webkit-scrollbar-thumb:hover
+      background-color: $secondary-accent-color
+  &__cards
+    width: 3211px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 21px
+    &-item
+      display: flex
+      text-decoration: none
+      color: inherit
+      width: 100%
+      background-color: $secondary-accent-color
+      color: white
+      font-family: "Source Code Pro", sans-serif
+      &--row
+        flex-direction: row
+        max-height: 187px
+        .artists__cards-content
+          align-items: flex-start
+      &--row-reverse
+        flex-direction: row-reverse
+        max-height: 187px
+        .artists__cards-content
+          align-items: flex-end
+        .artists__cards-title
+          text-align: right
+      &--column
+        max-width: 181px
+        flex-direction: column
+      &--column-reverse
+        max-width: 181px
+        flex-direction: column-reverse
+      &--full
+        width: 100%
+        height: 100%
+        position: relative
+        .artists__cards
+          &-image
+            border: unset
+            flex-basis: 100%
+          &-content
+            position: absolute
+            left: 0
+            bottom: 0
+            opacity: 0
+            visibility: hidden
+            transition: all 0.3s ease-in-out
+            background: linear-gradient(180deg, rgba($secondary-accent-color, 0.00) 0%, rgba($secondary-accent-color, 1) 100%)
+            &.active
+              opacity: 1
+              visibility: visible
+    &-image
+      object-fit: cover
+      flex-basis: 50%
+      border: 5px solid $secondary-accent-color
+    &-content
+      padding: 20px 23px 23px 24px
+      flex-basis: 50%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 100%
+    &-title
+      font-size: 20px
+      font-weight: 700
+      line-height: 150%
+      letter-spacing: -0.44px
+      text-transform: uppercase
+    &-date
+      font-size: 14px
+      font-weight: 400
+      line-height: 150%
+      letter-spacing: -0.308px
+      text-transform: uppercase
+  &__block
+    display: flex
+    justify-content: space-between
+    width: 383px
+    height: 396px
+    &--column
+      flex-direction: column
+    &--row
+      flex-direction: row

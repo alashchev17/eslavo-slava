@@ -123,6 +123,7 @@ lineUpCards.forEach((item, index) => {
       lineUpCardsDescs[index].classList.toggle("hidden");
       setTimeout(() => {
         lineUpCardsDescs[index].classList.toggle("dnone")
+        
       }, 300);
     } else {
       lineUpCardsDescs[index].classList.toggle("dnone")
@@ -131,5 +132,18 @@ lineUpCards.forEach((item, index) => {
         lineUpCardsDescs[index].classList.toggle("active");
       }, 300);
     }
+  });
+});
+
+/****************************** ARTISTS ******************************/
+
+const fullCards = [].slice.call(document.querySelectorAll(".artists__cards-item--full"));
+
+fullCards.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    item.childNodes[3].classList.add("active");
+  });
+  item.addEventListener("mouseleave", () => {
+    item.childNodes[3].classList.remove("active");
   });
 });
