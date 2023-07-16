@@ -42,7 +42,7 @@
               <a href="#location" class="header__link">Location</a>
             </li>
             <li class="header__list-item">
-              <a href="#footer" class="header__link">Contacts</a>
+              <a href="#contacts" class="header__link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -1241,6 +1241,31 @@
     </div>
     <!-- /.container -->
   </section>
+  <section class="contacts" id="contacts">
+    <div class="contacts__container">
+      <h2 class="title contacts__title">Contact Us</h2>
+      <form action="#" class="contacts__form">
+        <div class="contacts__form-inputs">
+          <input type="text" class="input contacts__input" name="name" placeholder="Name">
+          <input type="email" class="input contacts__input" name="email" placeholder="Email">
+          <textarea type="text" class="input contacts__textarea" name="message" placeholder="Message"></textarea>
+        </div>
+        <!-- /.contacts__form-inputs -->
+        <div class="contacts__form-block">
+          <div class="contacts__form-checkbox checkbox">
+            <input type="checkbox" class="checkbox__input checkbox__input--hidden" id="checkbox" name="checkbox">
+            <label for="checkbox" class="checkbox__label" id="checkbox__label">
+              <span class="checkbox__label-item"></span>
+            </label>
+            <span class="contacts__info">I am agree with the <a href="#" class="contacts__link">Privacy Policy</a></span>
+          </div>
+        </div>
+        <button class="button contacts__button" type="submit">Send</button>
+        <!-- /.contacts__form-block -->
+      </form>
+    </div>
+    <!-- /.contacts__container -->
+  </section>
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__wrapper">
@@ -1263,7 +1288,7 @@
               <a href="#location" class="footer__link">Location</a>
             </li>
             <li class="footer__list-item">
-              <a href="#footer" class="footer__link">Contacts</a>
+              <a href="#contacts" class="footer__link">Contacts</a>
             </li>
           </ul>
         </nav>
