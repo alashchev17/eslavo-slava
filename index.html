@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 </head>
@@ -1187,6 +1188,59 @@
     </div>
     <!-- /.container -->
   </section>
+  <section class="location" id="location">
+    <div class="container">
+      <h2 class="title location__title">Location</h2>
+      <div class="location__block">
+        <!-- Slider main container -->
+        <div class="location__slider swiper">
+          <!-- Additional required wrapper -->
+          <div class="location__slider-wrapper swiper-wrapper">
+            <!-- Slides -->
+            <div class="location__slider-slide swiper-slide">
+              <img src="./assets/images/location-slides/1.png" alt="First slide" class="location__slider-image">
+            </div>
+            <!-- /.location__slider-slide -->
+            <div class="location__slider-slide swiper-slide">
+              <img src="./assets/images/location-slides/2.png" alt="Second slide" class="location__slider-image">
+            </div>
+            <!-- /.location__slider-slide -->
+            <div class="location__slider-slide swiper-slide">
+              <img src="./assets/images/location-slides/3.png" alt="Third slide" class="location__slider-image">
+            </div>
+            <!-- /.location__slider-slide -->
+            <div class="location__slider-slide swiper-slide">
+              <img src="./assets/images/location-slides/4.png" alt="Fourth slide" class="location__slider-image">
+            </div>
+            <!-- /.location__slider-slide -->
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="location__slider-pagination swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <button class="location__slider-button swiper-button-prev location__slider-button--prev"></button>
+          <button class="location__slider-button swiper-button-next location__slider-button--next"></button>
+        </div>
+        <!-- /.location__slider -->
+        <div class="location__content">
+          <h3 class="location__content-title">Delta del Llobregat</h3>
+          <div class="location__content-wrapper">
+            <h4 class="location__content-subtitle">How to get there?</h4>
+            <p class="location__content-desc">Enjoy the Delta del Llobregat: The Delta del Llobregat is a beautiful natural area located south of Barcelona, where the Llobregat River meets the Mediterranean Sea. Explore the stunning landscapes, observe the rich biodiversity, and enjoy activities such as bird watching, hiking, or cycling.</p>
+            <p class="location__content-desc">Remember to plan your return journey in advance, considering the train and bus schedules to ensure a smooth trip back.</p>
+          </div>
+          <!-- /.location__content-wrapper -->
+          <a href="#" class="location__content-button">
+            open map
+          </a>
+        </div>
+        <!-- /.location__content -->
+      </div>
+      <!-- /.location__block -->
+    </div>
+    <!-- /.container -->
+  </section>
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__wrapper">
@@ -1237,6 +1291,7 @@
     </div>
     <!-- /.container -->
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

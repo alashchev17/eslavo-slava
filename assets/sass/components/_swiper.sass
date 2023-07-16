@@ -1,0 +1,16 @@
+// Styles for bullets, which cannot be edited by custom classNames
+.swiper
+  &-pagination
+    &-bullet
+      width: 11px
+      height: 12px
+      border: 2px solid #ffffff
+      opacity: 1
+      border-radius: unset
+      background-color: transparent
+      &:not(:last-child)
+        margin: 0 21px 0 0!important
+      &:last-child
+        margin: 0!important
+      &-active
+        background-color: #ffffff

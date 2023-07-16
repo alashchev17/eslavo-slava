@@ -72,3 +72,20 @@
       &-item
         &--full
           transition: all 0.3s ease-in-out
+  .location
+    &__content
+      &-button
+        transition: all 0.3s ease-in-out
+        &:hover
+          border-color: #ffffff
+        &:active
+          background-color: #ffffff
+          color: #000000
+          &::after
+            background-image: url('../images/icons/arrow-active.svg')
+    &__slider
+      &-button
+        &[aria-disabled="false"]
+          transition: background-color 0.3s ease-in-out
+          &:hover
+            background-color: rgba(#ffffff, 0.5)

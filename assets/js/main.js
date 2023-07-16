@@ -147,3 +147,22 @@ fullCards.forEach(item => {
     item.childNodes[3].classList.remove("active");
   });
 });
+
+/****************************** LOCATION ******************************/
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
