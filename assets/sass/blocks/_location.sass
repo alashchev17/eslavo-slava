@@ -8,6 +8,41 @@
     min-width: 606px
     max-width: 606px
     height: 584px
+    &-button
+      width: 41px
+      height: 41px
+      border: 2px solid #ffffff
+      &::after
+        position: absolute
+        content: ''
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        width: 15.44px
+        height: 27.56px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+      &[aria-disabled="true"]
+        border-color: #000000
+        opacity: 0.5
+      &--prev
+        left: 40px
+        &::after
+          background-image: url("../images/icons/slider-arrow.svg")
+          transform: translate(-50%, -50%) rotate(180deg)
+        &[aria-disabled="true"]
+          &::after
+            background-image: url("../images/icons/slider-arrow-disabled.svg")
+      &--next
+        right: 40px
+        &::after
+          background-image: url("../images/icons/slider-arrow.svg")
+        &[aria-disabled="true"]
+          &::after
+            background-image: url("../images/icons/slider-arrow-disabled.svg")
+    &-pagination
+      bottom: 40px!important
   &__content
     padding: 77px 80px 50px 80px
     border-top: 5px solid
@@ -68,39 +103,3 @@
         background-size: cover
         margin-top: 2px
         transition: background-image 0.3s ease-in-out
-  &__slider
-    &-button
-      width: 41px
-      height: 41px
-      border: 2px solid #ffffff
-      &::after
-        position: absolute
-        content: ''
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: cover
-        width: 15.44px
-        height: 27.56px
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-      &[aria-disabled="true"]
-        border-color: #000000
-        opacity: 0.5
-      &--prev
-        left: 40px
-        &::after
-          background-image: url("../images/icons/slider-arrow.svg")
-          transform: translate(-50%, -50%) rotate(180deg)
-        &[aria-disabled="true"]
-          &::after
-            background-image: url("../images/icons/slider-arrow-disabled.svg")
-      &--next
-        right: 40px
-        &::after
-          background-image: url("../images/icons/slider-arrow.svg")
-        &[aria-disabled="true"]
-          &::after
-            background-image: url("../images/icons/slider-arrow-disabled.svg")
-    &-pagination
-      bottom: 40px!important

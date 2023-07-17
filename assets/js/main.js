@@ -2,8 +2,11 @@
 const heroSlide = document.querySelector(".hero__animation-slide");
 const lineUpSlide = document.querySelector(".line-up__animation-slide");
 const ticketsSlide = document.querySelector(".tickets__animation-slide");
+const thankyouSlide = document.querySelector(".thankyou__animation-slide");
+
 const preloader = document.querySelector(".preloader");
 const preloaderInfo = document.querySelector(".preloader__info");
+
 let TOP_OFFSET = -94;
 
 setTimeout(() => {
@@ -41,9 +44,18 @@ window.onload = () => {
         preloader.remove();
         document.body.style.overflow = "auto";
         setTimeout(() => {
-          slidesHandler(heroSlide, 1, 6);
-          slidesHandler(lineUpSlide, 1, 5);
-          slidesHandler(ticketsSlide, 1, 2);
+          if (heroSlide !== null) {
+            slidesHandler(heroSlide, 1, 6);
+          }
+          if (lineUpSlide !== null) {
+            slidesHandler(lineUpSlide, 1, 5);
+          }
+          if (ticketsSlide !== null) {
+            slidesHandler(ticketsSlide, 1, 2);
+          }
+          if (thankyouSlide !== null) {
+            slidesHandler(thankyouSlide, 1, 2);
+          }
         }, 1000);
       }, 150);
     }, 1500);
@@ -58,119 +70,133 @@ for (let anchor of anchors) {
     const blockID = anchor.getAttribute('href');
     console.log(blockID);
     const element = document.querySelector(blockID);
-    if (blockID == "#about") {
-      TOP_OFFSET = -160;
-    } else if (blockID == "#tickets") {
-      element.scrollIntoView({
-        block: "start",
-        behavior: "smooth"
-      });
-      return;
-    } else {
-      TOP_OFFSET = -94;
-    }
-    const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
+    if (element !== null) {
+      if (blockID == "#about") {
+        TOP_OFFSET = -160;
+      } else if (blockID == "#tickets") {
+        element.scrollIntoView({
+          block: "start",
+          behavior: "smooth"
+        });
+        return;
+      } else {
+        TOP_OFFSET = -94;
+      }
+      const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
 
-    window.scrollTo({
-      top: y, 
-      behavior: 'smooth'
-    });
+      window.scrollTo({
+        top: y, 
+        behavior: 'smooth'
+      });
+    }
   });
 }
 
 /****************************** TABS ******************************/
 
-const tabsButtons = [].slice.call(document.querySelectorAll(".line-up__tabs-link"));
-const tabs = [].slice.call(document.querySelectorAll(".line-up__tab"));
-const lineUpCards = [].slice.call(document.querySelectorAll(".line-up__card"));
-const lineUpCardsDescs = [].slice.call(document.querySelectorAll(".line-up__card-desc"));
+if (document.querySelector(".line-up") !== null) {
+  const tabsButtons = [].slice.call(document.querySelectorAll(".line-up__tabs-link"));
+  const tabs = [].slice.call(document.querySelectorAll(".line-up__tab"));
+  const lineUpCards = [].slice.call(document.querySelectorAll(".line-up__card"));
+  const lineUpCardsDescs = [].slice.call(document.querySelectorAll(".line-up__card-desc"));
 
 
-tabsButtons.forEach((item, index) => {
-  item.addEventListener("click", (event) => {
-    event.preventDefault();
-    const activeButtons = tabsButtons.filter(activeButton => activeButton.classList.contains("active"));
-    const activeTabs = tabs.filter(activeTab => activeTab.classList.contains("active"));
-    const activeCards =  lineUpCards.filter(activeCard => activeCard.classList.contains("active"));
-    const activeDescs = lineUpCardsDescs.filter(activeDesc => activeDesc.classList.contains("active"));
+  tabsButtons.forEach((item, index) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      const activeButtons = tabsButtons.filter(activeButton => activeButton.classList.contains("active"));
+      const activeTabs = tabs.filter(activeTab => activeTab.classList.contains("active"));
+      const activeCards =  lineUpCards.filter(activeCard => activeCard.classList.contains("active"));
+      const activeDescs = lineUpCardsDescs.filter(activeDesc => activeDesc.classList.contains("active"));
 
-    activeCards.forEach(item => {
-      item.classList.remove("active");
+      activeCards.forEach(item => {
+        item.classList.remove("active");
+      });
+      activeDescs.forEach(item => {
+        item.classList.remove("active");
+        item.classList.add("hidden");
+        item.classList.add("dnone");
+      });
+      activeButtons.forEach(item => {
+        item.classList.remove("active");
+      });
+      activeTabs.forEach(item => {
+        item.classList.remove("active");
+      });
+      item.classList.toggle("active");
+      tabs[index].classList.toggle("active");
     });
-    activeDescs.forEach(item => {
-      item.classList.remove("active");
-      item.classList.add("hidden");
-      item.classList.add("dnone");
-    });
-    activeButtons.forEach(item => {
-      item.classList.remove("active");
-    });
-    activeTabs.forEach(item => {
-      item.classList.remove("active");
-    });
-    item.classList.toggle("active");
-    tabs[index].classList.toggle("active");
-
   });
-});
 
-lineUpCards.forEach((item, index) => {
-  item.addEventListener("click", (event) => {
-    event.preventDefault();
-    item.classList.toggle("active");
-    if (lineUpCardsDescs[index].classList.contains("active")) {
-      lineUpCardsDescs[index].classList.toggle("active");
-      lineUpCardsDescs[index].classList.toggle("hidden");
-      setTimeout(() => {
-        lineUpCardsDescs[index].classList.toggle("dnone")
-        
-      }, 300);
-    } else {
-      lineUpCardsDescs[index].classList.toggle("dnone")
-      setTimeout(() => {
-        lineUpCardsDescs[index].classList.toggle("hidden");
+  lineUpCards.forEach((item, index) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      item.classList.toggle("active");
+      if (lineUpCardsDescs[index].classList.contains("active")) {
         lineUpCardsDescs[index].classList.toggle("active");
-      }, 300);
-    }
+        lineUpCardsDescs[index].classList.toggle("hidden");
+        setTimeout(() => {
+          lineUpCardsDescs[index].classList.toggle("dnone")
+          
+        }, 300);
+      } else {
+        lineUpCardsDescs[index].classList.toggle("dnone")
+        setTimeout(() => {
+          lineUpCardsDescs[index].classList.toggle("hidden");
+          lineUpCardsDescs[index].classList.toggle("active");
+        }, 300);
+      }
+    });
   });
-});
+}
 
 /****************************** ARTISTS ******************************/
 
-const fullCards = [].slice.call(document.querySelectorAll(".artists__cards-item--full"));
+if (document.querySelector(".artists") !== null) {
+  const fullCards = [].slice.call(document.querySelectorAll(".artists__cards-item--full"));
 
-fullCards.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    item.childNodes[3].classList.add("active");
+  fullCards.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      item.childNodes[3].classList.add("active");
+    });
+    item.addEventListener("mouseleave", () => {
+      item.childNodes[3].classList.remove("active");
+    });
   });
-  item.addEventListener("mouseleave", () => {
-    item.childNodes[3].classList.remove("active");
-  });
-});
+}
 
 /****************************** LOCATION ******************************/
-
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-});
+if (document.querySelector(".location") !== null) {
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+}
 
 
 /****************************** CONTACTS ******************************/
 
-let checkboxLabel = document.querySelector(".checkbox__label");
-checkboxLabel.addEventListener("click", () => {
-  checkboxLabel.classList.toggle("checkbox__label--active");
-});
+if (document.querySelector(".contacts") !== null) {
+  let checkboxLabel = document.querySelector(".checkbox__label");
+  checkboxLabel.addEventListener("click", () => {
+    checkboxLabel.classList.toggle("checkbox__label--active");
+  });
+}
+
+/****************************** CONTACTS ******************************/
+
+if (document.querySelector(".thankyou") !== null) {
+  // code..
+}

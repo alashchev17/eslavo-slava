@@ -1,0 +1,21 @@
+.thankyou
+  &__animation
+    width: 100vw
+    height: 100vh
+    &-slide
+      width: 100%
+      height: 100%
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+      display: flex
+      align-items: center
+      justify-content: center
+      &[data-slide="1"]
+        background-image: url("../images/slides-thankyou/day.png")
+      &[data-slide="2"]
+        background-image: url("../images/slides-thankyou/night.png")
+  &__title
+    text-align: center
+    max-width: 950px
+    line-height: 115%
