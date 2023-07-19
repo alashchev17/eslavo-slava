@@ -94,7 +94,6 @@ for (let anchor of anchors) {
 
 /****************************** TABS ******************************/
 
-if (document.querySelector(".line-up") !== null) {
   const tabsButtons = [].slice.call(document.querySelectorAll(".line-up__tabs-link"));
   const tabs = [].slice.call(document.querySelectorAll(".line-up__tab"));
   const lineUpCards = [].slice.call(document.querySelectorAll(".line-up__card"));
@@ -148,11 +147,9 @@ if (document.querySelector(".line-up") !== null) {
       }
     });
   });
-}
 
 /****************************** ARTISTS ******************************/
 
-if (document.querySelector(".artists") !== null) {
   const fullCards = [].slice.call(document.querySelectorAll(".artists__cards-item--full"));
 
   fullCards.forEach(item => {
@@ -163,10 +160,9 @@ if (document.querySelector(".artists") !== null) {
       item.childNodes[3].classList.remove("active");
     });
   });
-}
 
 /****************************** LOCATION ******************************/
-if (document.querySelector(".location") !== null) {
+
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -183,19 +179,82 @@ if (document.querySelector(".location") !== null) {
       prevEl: '.swiper-button-prev',
     }
   });
-}
-
 
 /****************************** CONTACTS ******************************/
+  
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const checkboxLabel = document.querySelector(".checkbox__label");
+checkboxLabel.addEventListener("click", () => {
+  checkboxLabel.classList.toggle("checkbox__label--active");
+});
 
-if (document.querySelector(".contacts") !== null) {
-  let checkboxLabel = document.querySelector(".checkbox__label");
-  checkboxLabel.addEventListener("click", () => {
-    checkboxLabel.classList.toggle("checkbox__label--active");
-  });
-}
+// Validation of form
+const contactsInputs = [].slice.call(document.querySelectorAll(".contacts__input"));
+const contactsButton = document.querySelector(".contacts__button");
 
-/****************************** CONTACTS ******************************/
+contactsInputs[0].addEventListener("input", () => {
+  if (contactsInputs[0].value.trim() == "") {
+    contactsInputs[0].classList.add("error")
+    contactsButton.setAttribute("disabled", "disabled");
+  } 
+  else if (contactsInputs[0].value.trim().length < 3) {
+    contactsInputs[0].classList.add("error");
+    contactsButton.setAttribute("disabled", "disabled");
+  }
+  else {
+    contactsInputs[0].classList.remove("error");
+    contactsButton.removeAttribute("disabled");
+    contactsInputs.forEach(item => {
+      if (item.value.trim() == "") {
+        contactsButton.setAttribute("disabled", "disabled");
+      } else if (item.classList.contains("error")) {
+        contactsButton.setAttribute("disabled", "disabled");
+      }
+    });
+  }
+});
+
+contactsInputs[2].addEventListener("input", () => {
+  if (contactsInputs[2].value.trim() == "") {
+    contactsInputs[2].classList.add("error");
+    contactsButton.setAttribute("disabled", "disabled");
+  } 
+  else if (contactsInputs[2].value.trim().length < 10) {
+    contactsInputs[2].classList.add("error");
+    contactsButton.setAttribute("disabled", "disabled");
+  }
+  else {
+    contactsInputs[2].classList.remove("error");
+    contactsButton.removeAttribute("disabled");
+    contactsInputs.forEach(item => {
+      if (item.value.trim() == "") {
+        contactsButton.setAttribute("disabled", "disabled");
+      } else if (item.classList.contains("error")) {
+        contactsButton.setAttribute("disabled", "disabled");
+      }
+    });
+  }
+});
+
+contactsInputs[1].addEventListener("input", () => {
+  if (contactsInputs[1].value.trim() == "") {
+    contactsInputs[1].classList.add("error");
+    contactsButton.setAttribute("disabled", "disabled");
+  }
+  else {
+    contactsInputs[1].classList.remove("error");
+    contactsButton.removeAttribute("disabled");
+    contactsInputs.forEach(item => {
+      if (item.value.trim() == "") {
+        contactsButton.setAttribute("disabled", "disabled");
+      } else if (item.classList.contains("error")) {
+        contactsButton.setAttribute("disabled", "disabled");
+      }
+    });
+  }
+});
+
+/****************************** THANKYOU ******************************/
 
 if (document.querySelector(".thankyou") !== null) {
   // code..

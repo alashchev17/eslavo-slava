@@ -8,3 +8,11 @@
   font-weight: 400
   line-height: 125%
   letter-spacing: -0.02px
+  transition: all 0.3s ease-in-out
+  &::placeholder
+    transition: color 0.3s ease-in-out
+  &.error
+    border-color: #dd3b3b
+    color: #dd3b3b
+    &::placeholder
+      color: #dd3b3b
