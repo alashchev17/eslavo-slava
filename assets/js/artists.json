@@ -1,0 +1,18 @@
+{
+  "artists": {
+    "1": {
+      "photo": "./assets/images/popup-artists/1.png",
+      "description": "Test description",
+      "name": "Okean Elzy",
+      "date": "1 day, 17:00",
+      "status": "1/30"
+    },
+    "2": {
+      "photo": "./assets/images/popup-artists/2.png",
+      "description": "Kirill Timoshenko, founder and leader of the group, was born in the city of Zmiev, Kharkov region, Ukraine on March 31, 1997. The group formed in February 2016. The first concert of the group took place in 2016, but the audience was mostly Kirill's friends and acquaintances. At the next performance, the performers expected to see about 150 spectators, and there were 400 people in the hall, despite the fact that the group was ready to perform only three songs. Cyril did not invest in the promotion of his project; popularity began to grow due to the Vkontakte publics, which became interested in the group. On February 24, 2017, the debut music album with eight tracks was released with the title '8 Ways to Stop Masturbating', which quickly gained popularity, in particular on the VKontakte social network. Portal The Flow placed the album on the 2nd line of '50 domestic albums of 2017'. On June 9, 2017, the group's first video clip for the song 'Your Sister's Favorite Song' was released, which gained several million views on YouTube.",
+      "name": "Poshlaya Molly",
+      "date": "1 day, 18:00",
+      "status": "2/30"
+    }
+  }
+}

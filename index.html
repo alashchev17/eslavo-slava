@@ -20,6 +20,35 @@
     <span class="preloader__info">Content is loading...</span>
   </div>
   <!-- /.preloader -->
+  <div class="popup hidden">
+    <div class="popup__wrapper">
+      <div class="popup__body" data-artist="2">
+        <img class="popup__image" src="./assets/images/popup-artists/2.png" alt="Artist 2" data-artist="2" />
+        <!-- /.popup__image -->
+        <div class="popup__content">
+          <a href="#" class="popup__close"></a>
+          <h2 class="popup__title" data-artist="2">Poshlaya Molly</h2>
+          <div class="popup__desc">
+            <p class="popup__text" data-artist="2">
+              Kirill Timoshenko, founder and leader of the group, was born in the city of Zmiev, Kharkov region, Ukraine on March 31, 1997. The group formed in February 2016. The first concert of the group took place in 2016, but the audience was mostly Kirill's friends and acquaintances.
+              At the next performance, the performers expected to see about 150 spectators, and there were 400 people in the hall, despite the fact that the group was ready to perform only three songs. Cyril did not invest in the promotion of his project; popularity began to grow due to the Vkontakte publics, which became interested in the group.
+              On February 24, 2017, the debut music album with eight tracks was released with the title "8 Ways to Stop Masturbating", which quickly gained popularity, in particular on the VKontakte social network. Portal The Flow placed the album on the 2nd line of "50 domestic albums of 2017". On June 9, 2017, the group's first video clip for the song "Your Sister's Favorite Song" was released, which gained several million views on YouTube.
+            </p>
+          </div>
+          <!-- /.popup__desc -->
+          <div class="popup__bottom">
+            <span class="popup__date" data-artist="2">1 day, 18:00</span>
+            <span class="popup__page" data-artist="2">2/30</span>
+          </div>
+          <!-- /.popup__bottom -->
+        </div>
+        <!-- /.popup__content -->
+      </div>
+      <!-- /.popup__body -->
+    </div>
+    <!-- /.popup__wrapper -->
+  </div>
+  <!-- /.popup -->
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -760,9 +789,9 @@
     <div class="container">
       <h2 class="title artists__title">Artists</h2>
       <div class="artists__wrapper">
-        <div class="artists__cards">
+        <div class="artists__cards desktop">
           <div class="artists__block artists__block--column">
-            <a href="#" class="artists__cards-item artists__cards-item--row">
+            <a href="#" data-artist="2" class="artists__cards-item artists__cards-item--row">
               <img src="./assets/images/artists/1.png" alt="#" class="artists__cards-image">
               <div class="artists__cards-content">
                 <h2 class="artists__cards-title">Poshlaya Molly</h2>

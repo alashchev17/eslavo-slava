@@ -1,11 +1,20 @@
 *, *::before, *::after
   box-sizing: border-box
+html
 body
   position: relative
   background-color: $primary-accent-color
   font-family: "Determination Sans", sans-serif
   font-weight: 400
   min-height: 100vh
+  &::-webkit-scrollbar
+    height: 11px
+    width: 9px
+    background: linear-gradient(270deg, $secondary-accent-color 45.24%, rgba($secondary-accent-color, 0) 45.45%)
+  &::-webkit-scrollbar-thumb 
+    background-color: $secondary-accent-color
+  &::-webkit-scrollbar-thumb:hover
+    background-color: $secondary-accent-color
 .container
   max-width: 1191px
   margin: 0 auto

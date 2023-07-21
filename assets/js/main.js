@@ -259,3 +259,34 @@ contactsInputs[1].addEventListener("input", () => {
 if (document.querySelector(".thankyou") !== null) {
   // code..
 }
+
+
+/****************************** POPUP ******************************/
+
+const popup         =    document.querySelector(".popup")
+      popupClose    =    document.querySelector(".popup__close")
+      popupWrapper  =    document.querySelector(".popup__wrapper")
+      artistsCards  =    document.querySelectorAll(".artists__cards-item");
+
+artistsCards.forEach(item => {
+  item.addEventListener("click", () => {
+    if (item.dataset.artist == "2") {
+      popup.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+  });
+});
+
+popupWrapper.addEventListener("click", (event) => {
+  if (event.target.classList == "popup__wrapper") {
+    popup.classList.add("hidden");
+    document.body.style.overflow = "auto";
+  } else {
+    return false;
+  }
+});
+
+popupClose.addEventListener("click", () => {
+  popup.classList.add("hidden");
+  document.body.style.overflow = "auto";
+});
