@@ -1,18 +1,215 @@
 {
-  "artists": {
-    "1": {
-      "photo": "./assets/images/popup-artists/1.png",
-      "description": "Test description",
+  "artists": [
+    {
       "name": "Okean Elzy",
+      "description": "Okean Elzy (Ukrainian: Океан Ельзи, translation: Elza's Ocean) is a Ukrainian rock band. It was formed in 1994 in Lviv, Ukraine. The band's vocalist and frontman is Svyatoslav Vakarchuk. In April 2007 Okean Elzy received FUZZ Magazine music awards for &quotBest rock act&quot. On stage, the rock-band enthralls fans through electrifying performance. In press, OKEAN ELZY has been recognized many times as the best rock-and live-band by music critics. And in life, for more then 20 years it enriches style of young people with high quality unique melodies and in-depth lyrics.",
+      "photo": "./assets/images/popup-artists/1.jpg",
       "date": "1 day, 17:00",
-      "status": "1/30"
+      "page": "1/30"
     },
-    "2": {
-      "photo": "./assets/images/popup-artists/2.png",
-      "description": "Kirill Timoshenko, founder and leader of the group, was born in the city of Zmiev, Kharkov region, Ukraine on March 31, 1997. The group formed in February 2016. The first concert of the group took place in 2016, but the audience was mostly Kirill's friends and acquaintances. At the next performance, the performers expected to see about 150 spectators, and there were 400 people in the hall, despite the fact that the group was ready to perform only three songs. Cyril did not invest in the promotion of his project; popularity began to grow due to the Vkontakte publics, which became interested in the group. On February 24, 2017, the debut music album with eight tracks was released with the title '8 Ways to Stop Masturbating', which quickly gained popularity, in particular on the VKontakte social network. Portal The Flow placed the album on the 2nd line of '50 domestic albums of 2017'. On June 9, 2017, the group's first video clip for the song 'Your Sister's Favorite Song' was released, which gained several million views on YouTube.",
+    {
       "name": "Poshlaya Molly",
+      "description": "Kirill Timoshenko, founder and leader of the group, was born in the city of Zmiev, Kharkov region, Ukraine on March 31, 1997. The group formed in February 2016. The first concert of the group took place in 2016, but the audience was mostly Kirill's friends and acquaintances. At the next performance, the performers expected to see about 150 spectators, and there were 400 people in the hall, despite the fact that the group was ready to perform only three songs. Cyril did not invest in the promotion of his project; popularity began to grow due to the Vkontakte publics, which became interested in the group. On February 24, 2017, the debut music album with eight tracks was released with the title &quot8 Ways to Stop Masturbating&quot, which quickly gained popularity, in particular on the VKontakte social network. Portal The Flow placed the album on the 2nd line of &quot50 domestic albums of 2017&quot. On June 9, 2017, the group's first video clip for the song &quotYour Sister's Favorite Song&quot was released, which gained several million views on YouTube.",
+      "photo": "./assets/images/popup-artists/2.jpg",
       "date": "1 day, 18:00",
-      "status": "2/30"
+      "page": "2/30"
+    },
+    {
+      "name": "Luna",
+      "description": "She was born on August 28, 1990 in the city of Karl-Marx-Stadt, East Germany in the family of the Group of Soviet Forces in Germany serviceman. A few years later the family returned to Ukraine. Her music was praised by critics for the combination of electronic music with a melancholy mood, and also for references to '90s pop culture.",
+      "photo": "./assets/images/popup-artists/3.jpg",
+      "date": "1 day, 19:00",
+      "page": "3/30"
+    },
+    {
+      "name": "Valentin Strykalo",
+      "description": "Is a rising star of Ukrainian alternative music scene. Yuriy's fictional character, Valentin Strykalo, was first introduced to public in the dawn of 2008 through a series of vlog-styled humorous videos. He presented himself as a young musician, claiming to be a talented performer and a singer-songwriter from a small village in Zhytomyrskiy region, Ukraine. Each of his videos addressed one of the xUSSR pop-stars, including Timati, Vyacheslav Malezhik, duo of Potap and Nastya Kamenskih and PHARAOH. Each video consisted of a small introduction; a song, written and performed in a key, vaguely resembling the addressed artists style; and the closing piece, where songwriter was asking to contact him for further details. Despite the introductory part of the videos, where Valentin appeared to be very shy, stuttering and hesitant, the songs where composed and performed skillfully and with a flavor of a professional musician.",
+      "photo": "./assets/images/popup-artists/4.jpg",
+      "date": "1 day, 20:00",
+      "page": "4/30"
+    },
+    {
+      "name": "TVORCHI",
+      "description": "In September 2020, Tvorchi released their third album, 13 Waves, which was recorded remotely because of the COVID-19 pandemic. The album was played more than two million times on music platforms in the first week since its release. On 19 December 2020, the duo won the online music award &quotCulture Ukraine&quot in two categories: &quotBest New Artist&quot, and &quotBest English-language single&quot for &quotBonfire&quot. The duo was also nominated for the YUNA 2021 Music Awards in four categories, including &quotAlbum of the Year&quot. Tvorchi performing in Gdańsk, Poland in 2022 In December 2022, they entered Vidbir 2023 and won the competition with the song &quotHeart of Steel&quot, coming second in the jury vote and first in the public vote, and thus earned the right to represent Ukraine.",
+      "photo": "./assets/images/popup-artists/5.jpg",
+      "date": "1 day, 21:00",
+      "page": "5/30"
+    },
+    {
+      "name": "The HardKiss",
+      "description": "The Hardkiss was formed in 2011 by husband-and-wife duo Julia Sanina (vocals) and Valeriy Bebko (guitar), initially under the name Val & Sanina. In September of that year, they released their debut video, &quotBabylon&quot, and they opened for English synthpop duo Hurts in Kyiv on 20 October. On 18 November, they opened for American singer Solange Knowles, also in Kyiv. In 2012, the Hardkiss were nominated for the MTV Europe Music Award for Best Ukrainian Act.The same year, the band performed at MIDEM festival on 29 January. In 2013, the Hardkiss won two awards—Best New Act and Best Music Video (this went to producer Valeriy Bebko, for the video to &quotMake-Up&quot)—at the Ukrainian national music award, YUNA. They also opened the Muz-TV Music Awards on 7 June. That year, the Hardkiss became &quotvoice and face&quot of Pepsi in Ukraine. The band took part in a tour, Pepsi Stars of Now, covering sixteen cities.",
+      "photo": "./assets/images/popup-artists/6.jpg",
+      "date": "1 day, 22:00",
+      "page": "6/30"
+    },
+    {
+      "name": "SadSvit",
+      "description": "Post-punk artist, composer and songwriter. If you think that you only like listening to pop, then after listening to SadSvit music, you will definitely think about whether you are a music lover all of a sudden. His music is able to hook to the depths of both text and sound.",
+      "photo": "./assets/images/popup-artists/7.jpg",
+      "date": "1 day, 23:00",
+      "page": "7/30"
+    },
+    {
+      "name": "Kill Eva",
+      "description": "No need to promise Sweet Dreams<br>My mind is getting blacker<br>In the head of the afterlife laughter<br>imaginary people<br>Screams, screams, screams, screams<br>people invented by me<br>I want, I want not to hear<br>people invented by me<br>I go crazy shimmering<br>Like a polar star<br>No need to promise Sweet Dreams<br>I will disappear forever<br>Screams, screams, screams, screams<br>people invented by me<br>I want, I want not to hear<br>people invented by me<br>Or something in my head<br>Or what's wrong with me<br>I don't remember these people<br>",
+      "photo": "./assets/images/popup-artists/8.jpg",
+      "date": "1 day, 24:00",
+      "page": "8/30"
+    },
+    {
+      "name": "Nikitata",
+      "description": "Belarusian singer, musician and blogger. Nikita Dmitriev was born on November 22, 1998 in Borisov, Belarus. Nikita told about himself that, being a first-grader, he already really wanted to study music and dreamed of learning to play the guitar. The desire to study music led him to folk singing, but this did not bring great joy to the teenager. For two years he attended a circle, trying to find himself in art, and decided to sign up for lessons with a guitar teacher.",
+      "photo": "./assets/images/popup-artists/9.jpg",
+      "date": "1 day, 01:00",
+      "page": "9/30"
+    },
+    {
+      "name": "went out for a smoke",
+      "description": "He prefers to work in the genres of abstract hip-hop with elements of techno and electro. Yura presents musical works in a rather mannered way. Sometimes, it seems that they are saturated with aggression and anger in its fiercest manifestation. He often brings up poignant topics about illegal drugs and the depressing realities of modern life.<br>The debut collection was released in 2017. It was called &quotFashion&quot. Numerous music lovers supported the newcomer's creation, which made it possible to release the second Avangard disc in a row. Further, he warmed up the audience before the performance of the singer Pharaoh, which allowed to increase the fan base.<br>A year later, his discography increased by several albums. In 2018, he pleased his fans with the release of the discs Disgusting and Never. On the wave of popularity, the premiere of non-album songs took place: &quotWe all die alone&quot, &quotBelly&quot, &quotSleep&quot, etc.",
+      "photo": "./assets/images/popup-artists/10.jpg",
+      "date": "1 day, 02:00",
+      "page": "10/30"
+    },
+    
+    {
+      "name": "Anastasiia Kamenskykh",
+      "description": "In 2004, NK debuted as a singer at the Black Sea Games festival, where she received a grand prix and won all kinds of awards. One year later she received the UBN Awards at the Opening of the Year nomination in London in 2005.<br>During 2006-2017, NK performed as part of the duo Potap & Nastya alongside Oleksii Potapenko. The duo became very popular, received multiple awards, and worldwide prominence.<br>In 2017, she began her solo project NK. That year she debuted her first solo video and song &quot#etomoyanoch&quot [&quot#thatsmytypeofnight&quot] which went viral in social media. That same year she released a Christmas acoustic album and Christmas video Xmas with NK which featured famous Christmas hits in four languages (English, Italian, Russian, and Ukrainian) as well as original songs written by NK herself. In 2014, Potap and Kamenskih were criticized in Ukraine for continuing to attend award ceremonies in Russia, while Ukraine was under Russian aggression.",
+      "photo": "./assets/images/popup-artists/11.jpg",
+      "date": "2 day, 17:00",
+      "page": "11/30"
+    },
+    {
+      "name": "Palindrome",
+      "description": "Is a Ukrainian rapper, singer, composer, director and music producer. Born on September 1, 1994 in Lviv, graduated from the Faculty of Directing of Kyiv National University of Culture and Arts. He started his musical career in Lviv, in particular in the band Hlava 94. In 2019, he released his debut album as Palindrome. The music magazine &quotSluh&quot recognized his second album &quotAbout Today, Today and Tomorrow&quot as the best album of the year. Stepan Burban is also the author of the soundtrack to the tape about Vasyl Stus &quotYour Vasyl&quot.<br>The Jager Music Awards is an award for independent music aimed at developing the local scene for musicians of all styles. This year, the nominees of the award have been selected for the fourth time. We should add that similar awards from Jagermeister exist in other countries, in particular in Australia",
+      "photo": "./assets/images/popup-artists/12.jpg",
+      "date": "2 day, 18:00",
+      "page": "12/30"
+    },
+    {
+      "name": "T-FEST",
+      "description": "T-Fest (T-Fest, real name Kirill Igorevich Nezboretsky; born May 8, 1997, Chernivtsi, Ukraine) - Ukrainian rapper, songwriter. Cyril Nezboretsky was born in the city of Chernivtsi in the family of a doctor. He studied at the music school in piano and percussion classes, but never graduated from it. At 11, he became interested in rap. In particular, he really liked the works of rapper Schokk’a, and he recorded a number of covers on them. A few years later, in 2012, T-Fest recorded with Schokk’s joint track &quotBurn with me&quot (T-fest ft. Schokk_YA). In 2014, he changed the sound and began working in the style of trap. Released the track &quotTrue.&quot After that, two years about T-Fest’s was not heard. January 20, 2016 in his group &quotVKontakte&quot announced a reboot of his work and uploaded the track &quotReboot&quot. And now Cyril had a new appearance, from now on his head were French (French braids).",
+      "photo": "./assets/images/popup-artists/13.jpg",
+      "date": "2 day, 19:00",
+      "page": "13/30"
+    },
+    {
+      "name": "Ivan Dorn",
+      "description": "In 2006, he sang in a Moscow a cappella duo, but soon decided to return to Ukraine to join the Kyiv National I. K. Karpenko-Kary Theatre, Cinema and Television University. In 2006, at a Jamiroquai concert, he met Anna Dobrydneva and together they created the duo &quotPara Normalnykh&quot (&quotA Pair of Normals&quot).<br>From 2007 to 2010, he continued to sing with Anna but then in 2010 she began working with Ukrainian singer Artem Meh. In 2008, on invitation by the TV producer Oleksandr Asaulyuk Dorn began his TV career as the host of the program Guten Morgen on M1 channel.<br>He released his debut studio album &quotCo'N'Dorn&quot in 2012 which had made a huge impact on both Russian and Ukrainian scene and won many awards.Dorn was honoured as &quotan idol for a new generation.&quot<br>In the summer of 2014 Dorn took part in the New wave music festival in Jūrmala, where he performed the Ukrainian-language song of the Skryabin (band) - &quotPenguin Dance&quot  dressed in a sweater with the image of the coat of arms of Ukraine. This act received positive reviews in Ukraine. In Russia, because of this, the singer was suggested to be banned. But he wasn't banned and remains popular. In Ukraine Dorn was criticized for continuing to performing in Russia following the 2014 Russian military intervention in Ukraine. This criticism was somewhat relieved when it was reported that Dorn had secretly donated $10,000 to the Ukrainian army in 2014. However, Dorn denied this in an April 2017 interview with Yury Dud. He claimed he had donated not to the military, but specifically to civilians who had been affected by shelling, but that the volunteer who was in charge of spending the money used part of it to buy army supplies, and publicly thanked Dorn for that, putting the singer in &quotan uncomfortable position.&quot Also in the online interview with Dud Dorn claimed that had worn the Ukrainian symbol at the 2014 New wave music festival &quotso that people wouldn’t make a stink,&quot apparently meaning that he wanted to avoid criticism from his compatriots, who, he recalls, criticized another Ukrainian performer for wearing a costume with the colors of the Russian flag at the same event.",
+      "photo": "./assets/images/popup-artists/14.jpg",
+      "date": "2 day, 20:00",
+      "page": "14/30"
+    },
+    {
+      "name": "KAZKA",
+      "description": "The duet, which first charmed the Youtube audience with its debut song &quotSvyata&quot, and then organically continued to increase success, breaking through to the &quotX-factor 8&quot. KAZKA is a harbinger of that Ukrainian pop music that will combine lightness, joy of life, authentic notes and high culture of sound. Antisharovar-pop. The other day the second song of the group, &quotDiva&quot, was released, and everything is in order with it too.",
+      "photo": "./assets/images/popup-artists/15.jpg",
+      "date": "2 day, 21:00",
+      "page": "15/30"
+    },
+    {
+      "name": "DAKOOKA",
+      "description": "DAKOOKA - Ukrainian pop singer, songwriter and composer. At an early age she graduated from a music school in the piano class. She recorded her first song at the age of 18, from which Catherine's creative path began. In March 2015, the first album of the singer called &quotRadha&quot was released, recorded at the Ternopil studio &quotSpital Records&quot and containing 11 tracks in English. On July 9, 2016, she released the mini-album &quotA lot of fun with my friends.&quot In 2017, she took part in the television show &quotVoice of the Country&quot in the Potap team. On November 22, 2017, she presented the mini-album &quotGordo&quot which included 6 songs. In 2018, the singer's new album called &quotHero&quot was released, and after some time she released the mini-album &quotForm&quot. In 2019, the premiere of the album &quotStrangelove&quot took place. In 2020, the singer releases the album “Yes, who is this FEAT of yours?”, Consisting entirely of duet compositions. Many tracks from the artist's work became soundtracks for the popular Ukrainian TV series &quotFirst Swallows&quot.",
+      "photo": "./assets/images/popup-artists/16.jpg",
+      "date": "2 day, 22:00",
+      "page": "16/30"
+    },
+    {
+      "name": "Kalush",
+      "description": "Ukrainian rap group founded in 2019. The group includes Oleg Psyuk (aka Psyuchy Son) - founder and soloist, Igor Didenchuk - multi-instrumentalist and TS Kilimmen. The group was named after Kalush, the hometown of Oleg Psyuk.<br>The band's first music video for the song Don't Pickle was released on their official YouTube channel on October 17, 2019. The director of the video Delta Arthur is the director of many videos of the Ukrainian rap artist alyona alyona. The video was filmed on the streets of Kalush, and on the eve of the release, alyona+alyona announced it on her own Instagram channel.<br>After the release of the second video “You Drive” in November 2019, the Kalush group signed a cooperation agreement with the American hip-hop label Def Jam, which is part of the Universal Music Group.",
+      "photo": "./assets/images/popup-artists/17.jpg",
+      "date": "2 day, 23:00",
+      "page": "17/30"
+    },
+    {
+      "name": "Kola",
+      "description": "Participant of the talent show &quotX-Factor&quot and &quotVoice of the Country&quot. If you haven’t heard about her from TV yet, then her popular tracks “Chi at once?” and &quotBila heart&quot. The vocalist is able to easily captivate any listener with the melody and sound of her music.",
+      "photo": "./assets/images/popup-artists/18.jpg",
+      "date": "2 day, 24:00",
+      "page": "18/30"
+    },
+    {
+      "name": "Jerry Heil",
+      "description": "Jerry Heil began her professional music career in 2017, releasing her debut extended play De miy dim with Vidlik Records. She later released the single &quot#OKHRANA_OTMYENA&quot in 2019, which became a top five hit in Ukraine. Her debut studio album #YA_YANA was later released in October 2019. Since beginning her YouTube channel, she has accumulated more than 34.9 million views, and 193 thousand subscribers.<br>In September 2019, Heil released her debut studio album Ya, Yana onto YouTube. The album included eight songs, and was commercially released the following month. In January 2020, Heil was announced to be competing in Vidbir 2020, the Ukrainian national selection for the Eurovision Song Contest 2020 in Rotterdam. Her song, &quotVegan&quot, qualified to the final, where it finished in sixth place.",
+      "photo": "./assets/images/popup-artists/19.jpg",
+      "date": "2 day, 01:00",
+      "page": "19/30"
+    },
+    {
+      "name": "SESTRA",
+      "description": "The peculiarity of the duet of girls is the combination of bright and unique vocals with the driving and at the same time soulful sound of the saxophone. It is impossible not to dance to their works. A charge of classy energy is guaranteed.",
+      "photo": "./assets/images/popup-artists/20.jpg",
+      "date": "2 day, 02:00",
+      "page": "20/30"
+    },
+    {
+      "name": "Lilu45",
+      "description": "Lilu45 is a Ukrainian Russian-speaking singer with a unique timbre and a peculiar anguish in her voice, performing music in the alternative pop genre. The girl writes texts full of metaphors, is not afraid to be piercingly open and sincere, to open her soul to the public.<br>Lilu45 (real name - Lyudmila Sergeevna Belousova) was born on September 27, 2000 in Kyiv, Ukraine. As a child, the singer regretted that she was not born in the USSR, because her grandmother constantly told what a wonderful country it was with cheap goods, for example, sausage cost 8 kopecks. The artist admitted that if she had not gone into art, she would have become a neuroscientist. Then she could finally understand people and the world around her.",
+      "photo": "./assets/images/popup-artists/21.jpg",
+      "date": "3 day, 17:00",
+      "page": "21/30"
+    },
+    {
+      "name": "Ingret",
+      "description": "Ingret participant of the 6th season of &quotX-factor&quot, finalist of the show &quotVoice of the Country-7&quot.<br>Her voice will never be called ordinary or standard. The girl's vocals are so filled with ethnic motives and specific rhythms that you listen to it in one breath and fall in love from the first seconds.",
+      "photo": "./assets/images/popup-artists/22.jpg",
+      "date": "3 day, 18:00",
+      "page": "22/30"
+    },
+    {
+      "name": "Cepasa",
+      "description": "Cepasa - is a Ukrainian musician, music producer and artist based in Kyiv. The exquisite electronic sound that has become the key feature of Cepasa includes organic instruments, elements of world music and was born at the crossroads of downtempo and house, but it was the vocals, deep sound and sensual melodies that made his music recognizable from the first seconds. Awarded Ukrainian National Music Award – YUNA New Breath.<br>Pavlo Lenchenko, known by his stage name Cepasa, made his debut in 2012 with the album Doing Right which he performed live as an opening act for the Icelandic band Gus Gus. The successful performance marked him as a new talent on the Kyiv electronic scene and attracted the attention of the creative community and promoters. Since then, Cepasa has released 5 albums, 5 music videos and established himself as a sought-after live artist, having performed around a hundred live performances at various venues and festivals. The second album Nove (2014) was written during The Ukrainian Revolution of Dignity and was noted by international music bloggers as &quotelectronic music that is sure to turn heads&quot. ",
+      "photo": "./assets/images/popup-artists/23.jpg",
+      "date": "3 day, 19:00",
+      "page": "23/30"
+    },
+    {
+      "name": "The Structure of Hapiness",
+      "description": "Liza Uglach from the village of Knyazhichi in the Kiev region used to write Russian pop-punk about deadness and youth, but recently she switched to Ukrainian, looked into the electronics and released “Friend” - a rave mantra and one of the coolest tracks in the lime.<br>On the &quotFriend obkladinci&quot, three rabbits mean sexualization, narcotic speech and alcohol, a musician rose. &quotRabbits figured from the very first track. The structure of Happiness - just look at the life, knowing yourself. Life without fallows&quot The rabbits fixed behind themselves a metaphor for &quotguides to the unreal world, into which people so often fall through their lightness and carelessness of children.&quot At the butt, she cited the story &quotAlice at Divokrai&quot, at the same rabbit as a guide to another world.",
+      "photo": "./assets/images/popup-artists/24.jpg",
+      "date": "3 day, 20:00",
+      "page": "24/30"
+    },
+    {
+      "name": "Real O",
+      "description": "REAL O - energy, sexuality, youth, strength, tenderness and incredible warmth in the face of four charming vocalists: Regina, Yana Solomko, Alina Astrovskaya and Lina Mitsuki. The debut video for the song &quotI would...&quot immediately hit the first lines of the Ukrainian and Russian charts, where it registered in the golden hits for many years. The composition was recognized as the &quotBest Song of the Year&quot. They were awarded the Crystal Microphone awards in the nomination &quotHitmaker of the Year&quot, and received the &quotGolden Gramophone&quot from Russian Radio.<br>In April 2010, REAL O presented their debut album Dress to fans - a confident and diverse release, which included thirteen original tracks and three remixes. The title hit &quotDresses&quot for girls was written by Alla Borisovna Pugacheva's favorite author - Lyubasha. Famous men in dresses took part in the filming of the video: Kuzma, Potap, Nikolai Baskov, Comedy Club frontman Timur Rodriguez and others. And in December, the high-profile premiere of the song and the clip &quotElements&quot took place. Notable is the fact that the girls are the authors of many of their songs and even act as directors of their own videos.",
+      "photo": "./assets/images/popup-artists/25.jpg",
+      "date": "3 day, 21:00",
+      "page": "25/30"
+    },
+    {
+      "name": "SINOPTIK",
+      "description": "SINOPTIK (Синоптик) — is a Ukrainian rock band playing in the styles of psychedelic rock, stoner rock, alternative rock. Songs of the group in English and Ukrainian.<br>The name of the group is taken from the nickname of the leader of the group and its founder Dmitry Afanasiev-Gladkikh. The initial line-up included: Dmitry Afanasiev-Gladkikh, Boris Kukushkin (drums) and Sergey Afanasiev (bass guitar). In the first months, a lot of material from the previous band of Dmitry Afanasyev-Gladkikh, N.E.T. In the summer of 2011, the group gives the first public performances and wins the local Liverpool Stage of Glory competition, and Dmitry Sakir takes the place of the bass player. In 2012, the group performs at the then largest Ukrainian festival BestCity.UA, and makes several tours around the country.<br>In 2013, the band continues active touring, while simultaneously recording their first studio album. The disc of the same name &quotSINOPTIK&quot was released in January 2014, and a little later the musicians released a video for the song &quotWhom to sail with?&quot.",
+      "photo": "./assets/images/popup-artists/26.jpg",
+      "date": "3 day, 22:00",
+      "page": "26/30"
+    },
+    {
+      "name": "BADWOR7H",
+      "description": "BADWOR7H - a young music producer from Ukraine (Kiev), who is gradually twirling both in the underground sphere, blowing from St. Petersburg (Pumping House, Hard Bass), and in the hard dance style of the western mood (UK Hardcore, Bumping), gaining experience since the end of 2007. In August 2010, he founded the Hard Lickerz project, consisting of himself and DJSR. The tracks of the project have repeatedly become bestsellers on digital music platforms and received support from DJs in various compilations. Since the beginning of 2012, the members have been keen on promoting solo projects. You can often hear BW7 tracks in the Radio Record - Pump'n'Klubb rotation.",
+      "photo": "./assets/images/popup-artists/27.jpg",
+      "date": "3 day, 23:00",
+      "page": "27/30"
+    },
+    {
+      "name": "Love'n'Joy",
+      "description": "Once in the radiant expanses of Kiev, on one foggy October evening, three young guys whose names were Anton Pushkar, Rimantas Nagrodskis and Pashka Stupak decided to play a couple of songs in good Rock and Roll traditions. And after some time, a song was born with an elegant, but speaking about many things title - BDSM. On the fast track of their creative development, the group faced the usual problems and hardships, such as a change in line-up (Rimantas Nagrodskis left and Andrey Bit took his place), financial troubles that drove the group to the edge of the law. But! They did. They broke out and continue to play in a style that today is fashionable to call indie, but still I would like to call Rock and roll.",
+      "photo": "./assets/images/popup-artists/29.jpg",
+      "date": "3 day, 24:00",
+      "page": "28/30"
+    },
+    {
+      "name": "Stepan Giga",
+      "description": "Stepan Petrovich Giga (Ukrainian Stepan Petrovich Giga (sometimes Ґіґа); born November 16, 1959, the village of Belki (now the Transcarpathian region of Ukraine) - Ukrainian composer, musician, vocalist (lyric tenor). People's Artist of Ukraine (2002). Honorary Citizen township Batievo (2015).<br>He graduated from college in 1983 in three years, having skipped the course as an external student, and in the same year he entered the vocal faculty of the Kiev Conservatory, where he studied in the class of professor, head of the department, People's Artist of Ukraine K. D. Ognevoy. During his studies, he took part and won in more than 10 different competitions and festivals.<br>As a second-year student at the Conservatory, S. Giga is a soloist of the Stozhary mega-giga-synthesis group, popular in some regions of the Chernihiv region, at the Chernihiv Philharmonic, and at the same time works as a soloist of the opera studio of the Kiev Conservatory, which was led by People's Artist of the USSR Dmitry Gnatyuk.<br>On February 20, 1998, he became an Honored Artist of Ukraine, and four years later, on December 28, 2002, he received the title of People's Artist of Ukraine.",
+      "photo": "./assets/images/popup-artists/28.jpg",
+      "date": "3 day, 01:00",
+      "page": "29/30"
+    },
+    {
+      "name": "Children of Engineers",
+      "description": "Test description",
+      "photo": "./assets/images/popup-artists/30.jpg",
+      "date": "3 day, 02:00",
+      "page": "30/30"
     }
-  }
+  ]
 }

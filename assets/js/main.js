@@ -29,7 +29,7 @@ function slidesHandler(slider, initial, amount) {
   }
 }
 
-document.body.style.overflow = "hidden";
+document.body.classList.add("overflow");
 
 window.onload = () => {
   setTimeout(() => {
@@ -42,7 +42,7 @@ window.onload = () => {
       preloader.classList.add("preloader--hidden");
       setTimeout(() => {
         preloader.remove();
-        document.body.style.overflow = "auto";
+        document.body.classList.remove("overflow");
         setTimeout(() => {
           if (heroSlide !== null) {
             slidesHandler(heroSlide, 1, 6);
@@ -266,21 +266,64 @@ if (document.querySelector(".thankyou") !== null) {
 const popup         =    document.querySelector(".popup")
       popupClose    =    document.querySelector(".popup__close")
       popupWrapper  =    document.querySelector(".popup__wrapper")
+      popupImage    =    document.querySelector(".popup__image")
+      popupTitle    =    document.querySelector(".popup__title")
+      popupText     =    document.querySelector(".popup__text")
+      popupDate     =    document.querySelector(".popup__date")
+      popupPage     =    document.querySelector(".popup__page")
       artistsCards  =    document.querySelectorAll(".artists__cards-item");
 
-artistsCards.forEach(item => {
-  item.addEventListener("click", () => {
-    if (item.dataset.artist == "2") {
-      popup.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
+// Sorting array of artists cards in order of growing data-artist
+const arrayArtistsCards = [].slice.call(artistsCards);
+arrayArtistsCards.sort((a, b) => {
+  const artistA = parseInt(a.dataset.artist);
+  const artistB = parseInt(b.dataset.artist);
+  return artistA - artistB;
+});
+
+
+const getData = async () => {
+  const data = await fetch('http://localhost:5500/assets/js/artists.json');
+  
+  if (data.ok) {
+    return data.json();
+  } else {
+    throw new Error(`Данные не были получены, ошибка ${data.status} ${data.statusText}`);
+  }
+};
+
+arrayArtistsCards.forEach((item, index) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (item.dataset.artist == (index + 1)) {
+      getData()
+        .then(data => {
+          popupTitle.textContent = data.artists[index].name;
+          popupText.innerHTML = data.artists[index].description;
+          popupImage.src = data.artists[index].photo;
+          popupDate.textContent = data.artists[index].date;
+          popupPage.textContent = data.artists[index].page;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+        popupTitle.dataset.artist = (index + 1);
+        popupText.dataset.artist = (index + 1);
+        popupImage.dataset.artist = (index + 1);
+        popupDate.dataset.artist = (index + 1);
+        popupPage.dataset.artist = (index + 1);
     }
+    setTimeout(() => {
+      popup.classList.remove("hidden");
+      document.body.classList.add("overflow");
+    }, 100);
   });
 });
 
 popupWrapper.addEventListener("click", (event) => {
   if (event.target.classList == "popup__wrapper") {
     popup.classList.add("hidden");
-    document.body.style.overflow = "auto";
+    document.classList.remove("overflow");
   } else {
     return false;
   }
@@ -288,5 +331,5 @@ popupWrapper.addEventListener("click", (event) => {
 
 popupClose.addEventListener("click", () => {
   popup.classList.add("hidden");
-  document.body.style.overflow = "auto";
+  document.body.classList.remove("overflow");
 });

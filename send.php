@@ -8,7 +8,7 @@ $email = trim($_POST['email']);
 $message = trim($_POST['message']);
 $checkbox = isset($_POST['checkbox']) ? 'Yes' : 'No';
 
-// Checking if $name, $email and $message are field
+// Checking if $name, $email and $message are filled
 if (empty($name) || empty($email) || empty($message)) {
     die('Please, fill all fields.');
 }
