@@ -4,8 +4,8 @@
   position: relative
   border-bottom: 4px solid $third-accent-color
   &__button
-    max-width: 14.58%
-    height: 24.10%
+    max-width: 231.7px
+    height: 25.6%
     text-align: center
     position: absolute
     left: 50%
@@ -27,6 +27,8 @@
     color: #fff
     border: 3px solid transparent
     svg
+      width: 41px
+      height: 56px
       path
         fill: white
         transition: all 0.15s ease-in-out
@@ -39,15 +41,29 @@
       background-repeat: no-repeat
       background-size: cover
       background-position: center center
-      &[data-slide="1"]
-        background-image: url("../images/slides-desktop/first.png")
-      &[data-slide="2"]
-        background-image: url("../images/slides-desktop/second.png")
-      &[data-slide="3"]
-        background-image: url("../images/slides-desktop/third.png")
-      &[data-slide="4"]
-        background-image: url("../images/slides-desktop/fourth.png")
-      &[data-slide="5"]
-        background-image: url("../images/slides-desktop/fifth.png")
-      &[data-slide="6"]
-        background-image: url("../images/slides-desktop/sixth.png")
+      &.desktop
+        &[data-slide="1"]
+          background-image: url("../images/slides-hero/desktop/first.png")
+        &[data-slide="2"]
+          background-image: url("../images/slides-hero/desktop/second.png")
+        &[data-slide="3"]
+          background-image: url("../images/slides-hero/desktop/third.png")
+        &[data-slide="4"]
+          background-image: url("../images/slides-hero/desktop/fourth.png")
+        &[data-slide="5"]
+          background-image: url("../images/slides-hero/desktop/fifth.png")
+        &[data-slide="6"]
+          background-image: url("../images/slides-hero/desktop/sixth.png")
+      &.mobile
+        &[data-slide="1"]
+          background-image: url("../images/slides-hero/mobile/first.png")
+        &[data-slide="2"]
+          background-image: url("../images/slides-hero/mobile/second.png")
+        &[data-slide="3"]
+          background-image: url("../images/slides-hero/mobile/third.png")
+        &[data-slide="4"]
+          background-image: url("../images/slides-hero/mobile/fourth.png")
+        &[data-slide="5"]
+          background-image: url("../images/slides-hero/mobile/fifth.png")
+        &[data-slide="6"]
+          background-image: url("../images/slides-hero/mobile/sixth.png")

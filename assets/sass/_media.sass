@@ -1,3 +1,345 @@
+.mobile
+  display: none
+.logo
+  &--mobile
+    display: none
+  &--desktop
+    display: block
+.desktop
+  display: auto
+
+// Media query only for hero section
+@media screen and (min-width: 1671px)
+  .hero
+    &__animation
+      margin: 0 auto
+      max-width: 1671px
+      width: 1671px
+    &__button
+      max-width: 253.2px
+      height: 24.1%
+
+@media screen and (max-width: 1100px)
+  .line-up
+    &__header
+      flex-direction: column
+      align-items: flex-start
+    &__tabs
+      justify-content: space-between
+      width: 100%
+    &__body
+      flex-direction: column-reverse
+      align-items: center
+    &__animation
+      flex-basis: unset
+      width: 100%
+      height: 1390px
+    &__content
+      flex-basis: unset
+      width: 100%
+// Media queries for smaller monitors <1200px
+@media screen and (max-width: 1200px)
+  .container
+    padding: 0 20px
+  .tickets
+    &__cards
+      flex-direction: column
+      align-items: center
+      gap: 40px
+    &__card
+      max-width: 500px
+      height: 688px
+      &-body
+        max-height: 585px
+  .location
+    &__block
+      flex-direction: column
+    &__slider
+      min-width: unset
+      max-width: 100%
+      &-image
+        object-fit: cover
+        width: 100%
+        height: 100%
+    &__content
+      padding: 30px 40px 40px 40px
+      border-left: 5px solid #ffffff
+      border-top: unset
+      &-button
+        display: none
+// Media queries for smaller monitors <996px
+@media screen and (max-width: 996px)
+  .header
+    &__wrapper
+      gap: unset
+      justify-content: space-between
+    &__nav
+      width: auto
+    &__list
+      gap: 20px
+    &__link
+      font-size: 20px
+      font-weight: 400
+      letter-spacing: -0.38px
+  .hero
+    height: 555px
+    &__button
+      max-width: 141.7px
+      font-size: 35px
+      svg
+        width: 21px
+        height: 36px
+  .slogan
+    &__content
+      padding: 116px 20px
+  .about
+    &__content
+      padding: 25px 50px 70px 50px
+@media screen and (max-height: 914px)
+  .hero
+    height: 100vh
+    &__button
+      max-width: 231.7px
+      font-size: 45px
+      svg
+        width: 41px
+        height: 56px
+@media screen and (max-width: 795px)
+  .slogan
+    &__text
+      font-size: 62px
+      line-height: 125%
+    &__icon
+      bottom: 135px
+      width: 148px
+// Media queries for tablets <768px
+@media screen and (max-width: 768px)
+  .title
+    font-size: 50px
+  .container
+    padding: 0 16px
+  .mobile
+    display: flex
+  .desktop
+    display: none
+  .header
+    padding: 10px 0
+    border-bottom: 2px solid #ffffff
+    &__logo
+      display: none
+    &__burger
+      display: flex
+    &__button
+      &-close
+        display: inline-block
+        margin-bottom: 85px
+    &__nav
+      position: absolute
+      top: 0
+      left: 0
+      background-color: $secondary-accent-color
+      width: 100%
+      padding: 20px 0 40px 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      height: 100vh
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease-in-out
+      overflow-y: auto
+      &.active
+        opacity: 1
+        visibility: visible
+    &__list
+      flex-direction: column
+      align-items: center
+  .logo
+    &--mobile
+      display: block
+      width: 45px
+      height: 45px
+      object-fit: cover
+    &--desktop
+      display: none
+  .hero
+    border-bottom: 2px solid #ffffff
+    &__button
+      bottom: 60px
+      font-size: 24px
+      font-weight: 400
+      letter-spacing: 0.504px
+      max-width: 187px
+      width: 187px
+      height: 96px
+      gap: 12.5px
+      svg
+        width: 30px
+        height: 20.6px
+  .about
+    &::before
+      height: calc(100% - 48px)
+    &__content
+      border-top: 2px solid #ffffff
+      padding: 27px 36px 45px 36px
+      &.active
+        padding: 27px 36px 75px 36px
+    &__title
+      margin-bottom: 14px
+    &__desc
+      text-align: center
+      font-size: 12px
+      font-weight: 400
+      line-height: 150%
+      letter-spacing: -0.264px
+      &:not(:last-child)
+        margin-bottom: 17px
+  .artists
+    &__cards
+      width: 2096px
+      gap: 8px
+      &-image
+        width: 124px
+        height: 124px
+        border: 3px solid #010046
+      &-content
+        padding: 16px
+      &-title
+        font-size: 12px
+        font-weight: 700
+        line-height: 150%
+        letter-spacing: -0.264px
+      &-date
+        font-size: 10px
+        font-weight: 400
+        line-height: 150%
+        letter-spacing: -0.22px
+      &-item
+        &--full
+          .artists__cards-image
+            width: 100%
+            height: 100%
+    &__block
+      width: 255px
+      height: 256px
+
+  .line-up
+    &__animation
+      height: 570px
+    &__card
+      font-size: 16px
+      letter-spacing: -0.352px
+      &-block
+        max-width: 227px
+      &-content
+        max-width: 227px
+    &__tabs
+      gap: 8px
+      &-link
+        font-size: 16px
+        line-height: 1
+        padding: 4px 25px
+@media screen and (max-width: 615px)
+  .slogan
+    &__text
+      font-size: 48px
+      line-height: 140%
+    &__icon
+      bottom: 133px
+      width: 110px
+@media screen and (max-width: 475px)
+  .slogan
+    &__content
+      padding: 35px 20px
+    &__text
+      font-size: 38px
+      line-height: 160%
+    &__icon
+      bottom: 52px
+      width: 80px
+  .about
+    &__button
+      display: inline-block
+      cursor: pointer
+      font-family: "Source Code Pro", sans-serif
+      color: #ffffff
+      position: absolute
+      left: 50%
+      bottom: 5px
+      transform: translateX(-50%)
+      text-transform: uppercase
+      z-index: 500
+      content: 'Show more'
+      &.active
+        bottom: -45px
+        color: $primary-accent-color
+        content: 'Hide'
+    &__hide-show
+      max-height: 350px
+      overflow-y: hidden
+      position: relative
+      &.active
+        max-height: 100%
+        overflow-y: unset
+        &::before
+          opacity: 0
+          visibility: hidden
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        background: linear-gradient(0deg, $secondary-accent-color 0%, rgba($secondary-accent-color, 0) 100%)
+        width: 100%
+        height: 100%
+// Media queries for phones <420px
+@media screen and (max-width: 420px)
+  .slogan
+    &__text
+      font-size: 30px
+      line-height: 180%
+    &__icon
+      bottom: 53px
+      width: 60px
+  .title
+    font-size: 24px
+    font-weight: 400
+    line-height: normal
+    letter-spacing: -0.456px
+  .hero
+    &__button
+      bottom: 99px
+      height: 99px
+      max-width: 198px
+      width: 198px
+  .line-up
+    &__title
+      margin-bottom: 20px
+    &__tabs
+      margin-bottom: 18px
+    &__body
+      border-top: 1px solid #ffffff
+    &__animation
+      height: 388px
+    &__content
+      overflow-y: scroll
+      max-height: 594px
+    &__card
+      border-bottom: 1px solid #ffffff
+      &-header
+        padding: 16px 0
+      &-content
+        max-width: 187px
+      &-block
+        max-width: 187px
+        align-items: flex-start
+      &-desc
+        font-size: 12px
+        letter-spacing: -0.264px
+    &__tabs
+      &-link
+        padding: 4px 10px
+// Media queries for hover and active elements on wide monitors
 @media screen and (min-width: 620px) 
   .header
     &__link

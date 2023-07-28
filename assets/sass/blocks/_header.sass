@@ -11,9 +11,18 @@
     gap: 122px
   &__logo
     display: inline-block
-    min-width: 181px
     width: 181px
     height: 48px
+  &__burger
+    padding: 15px 11px
+    display: none
+    flex-direction: column
+    gap: 8px
+    &-item
+      display: inline-block
+      width: 32px
+      height: 3px
+      background-color: #ffffff
   &__nav
     width: 100%
   &__list
@@ -28,3 +37,12 @@
     line-height: 150%
     letter-spacing: -0.456px
     text-transform: uppercase
+  &__button
+    &-close
+      display: none
+      min-width: 39px
+      min-height: 39px
+      background-image: url("../images/icons/header-close.svg")
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover

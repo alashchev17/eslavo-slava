@@ -1,5 +1,6 @@
 /****************************** Animations ******************************/
-const heroSlide = document.querySelector(".hero__animation-slide");
+const heroSlideDesktop = document.querySelector(".hero__animation-slide.desktop");
+const heroSlideMobile = document.querySelector(".hero__animation-slide.mobile");
 const lineUpSlide = document.querySelector(".line-up__animation-slide");
 const ticketsSlide = document.querySelector(".tickets__animation-slide");
 const thankyouSlide = document.querySelector(".thankyou__animation-slide");
@@ -44,8 +45,11 @@ window.onload = () => {
         preloader.remove();
         document.body.classList.remove("overflow");
         setTimeout(() => {
-          if (heroSlide !== null) {
-            slidesHandler(heroSlide, 1, 6);
+          if (heroSlideDesktop !== null) {
+            slidesHandler(heroSlideDesktop, 1, 6);
+          }
+          if (heroSlideMobile !== null) {
+            slidesHandler(heroSlideMobile, 1, 6);
           }
           if (lineUpSlide !== null) {
             slidesHandler(lineUpSlide, 1, 5);
@@ -62,35 +66,40 @@ window.onload = () => {
   }, 1500);
 }
 
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (event) {
-    event.preventDefault();
-    const blockID = anchor.getAttribute('href');
-    console.log(blockID);
-    const element = document.querySelector(blockID);
-    if (element !== null) {
-      if (blockID == "#about") {
-        TOP_OFFSET = -160;
-      } else if (blockID == "#tickets") {
-        element.scrollIntoView({
-          block: "start",
-          behavior: "smooth"
-        });
-        return;
-      } else {
-        TOP_OFFSET = -94;
-      }
-      const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
 
-      window.scrollTo({
-        top: y, 
-        behavior: 'smooth'
-      });
-    }
-  });
-}
+/****************************** HEADER ******************************/
+
+const burgerButton = document.querySelector(".header__burger");
+const burgerClose = document.querySelector(".header__button-close");
+const headerNav = document.querySelector(".header__nav");
+
+burgerButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  headerNav.classList.add("active");
+  document.body.classList.add("overflow");
+});
+burgerClose.addEventListener("click", (event) => {
+  event.preventDefault();
+  headerNav.classList.remove("active");
+  document.body.classList.remove("overflow");
+});
+
+/****************************** ABOUT ******************************/
+const aboutButton = document.querySelector(".about__button");
+const aboutText = document.querySelector(".about__hide-show");
+const aboutContent = document.querySelector(".about__content")
+
+aboutButton.addEventListener("click", event => {
+  aboutText.classList.toggle("active");
+  aboutContent.classList.toggle("active");
+  aboutButton.classList.toggle("active");
+  if (aboutButton.classList.contains("active")) {
+    aboutButton.textContent = "Hide";
+  } else {
+    aboutButton.textContent = "Show more";
+  }
+});
 
 /****************************** TABS ******************************/
 
@@ -263,19 +272,19 @@ if (document.querySelector(".thankyou") !== null) {
 
 /****************************** POPUP ******************************/
 
-const popup         =    document.querySelector(".popup")
-      popupClose    =    document.querySelector(".popup__close")
-      popupWrapper  =    document.querySelector(".popup__wrapper")
-      popupImage    =    document.querySelector(".popup__image")
-      popupTitle    =    document.querySelector(".popup__title")
-      popupText     =    document.querySelector(".popup__text")
-      popupDate     =    document.querySelector(".popup__date")
-      popupPage     =    document.querySelector(".popup__page")
-      artistsCards  =    document.querySelectorAll(".artists__cards-item");
+const popup                  =    document.querySelector(".popup")
+      popupClose             =    document.querySelector(".popup__close")
+      popupWrapper           =    document.querySelector(".popup__wrapper")
+      popupImage             =    document.querySelector(".popup__image")
+      popupTitle             =    document.querySelector(".popup__title")
+      popupText              =    document.querySelector(".popup__text")
+      popupDate              =    document.querySelector(".popup__date")
+      popupPage              =    document.querySelector(".popup__page")
+      artistsCardsDesktop    =    document.querySelector(".artists__cards.desktop").querySelectorAll(".artists__cards-item");
 
 // Sorting array of artists cards in order of growing data-artist
-const arrayArtistsCards = [].slice.call(artistsCards);
-arrayArtistsCards.sort((a, b) => {
+const arrayArtistsCardsDesktop = [].slice.call(artistsCardsDesktop);
+arrayArtistsCardsDesktop.sort((a, b) => {
   const artistA = parseInt(a.dataset.artist);
   const artistB = parseInt(b.dataset.artist);
   return artistA - artistB;
@@ -292,7 +301,7 @@ const getData = async () => {
   }
 };
 
-arrayArtistsCards.forEach((item, index) => {
+arrayArtistsCardsDesktop.forEach((item, index) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
     if (item.dataset.artist == (index + 1)) {
@@ -323,8 +332,9 @@ arrayArtistsCards.forEach((item, index) => {
 popupWrapper.addEventListener("click", (event) => {
   if (event.target.classList == "popup__wrapper") {
     popup.classList.add("hidden");
-    document.classList.remove("overflow");
-  } else {
+    document.body.classList.remove("overflow");
+  }
+  else {
     return false;
   }
 });
@@ -333,3 +343,45 @@ popupClose.addEventListener("click", () => {
   popup.classList.add("hidden");
   document.body.classList.remove("overflow");
 });
+
+document.addEventListener("keydown", event => {
+  if (event.key == "Escape") {
+    if (!popup.classList.contains("hidden")) {
+      popup.classList.add("hidden");
+      document.body.classList.remove("overflow");
+    } else {
+      return false;
+    }
+  }
+});
+
+
+const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    console.log(blockID);
+    const element = document.querySelector(blockID);
+    if (element !== null || blockID !== "#popup") {
+      if (blockID == "#about") {
+        TOP_OFFSET = -160;
+      } else if (blockID == "#tickets") {
+        element.scrollIntoView({
+          block: "start",
+          behavior: "smooth"
+        });
+        return;
+      } else {
+        TOP_OFFSET = -94;
+      }
+      const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
+
+      window.scrollTo({
+        top: y, 
+        behavior: 'smooth'
+      });
+    }
+  });
+}
