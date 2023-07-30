@@ -114,7 +114,7 @@
 // Media queries for tablets <768px
 @media screen and (max-width: 768px)
   .title
-    font-size: 50px
+    font-size: 36px
   .container
     padding: 0 16px
   .mobile
@@ -242,6 +242,21 @@
         font-size: 16px
         line-height: 1
         padding: 4px 25px
+  .tickets
+    &__content
+      border-top: 2px solid #ffffff
+      padding: 19px 45px 0 45px
+    &__title
+      margin-bottom: 30px
+    &__card
+      &-header
+        height: unset
+      &-title
+        padding: 18px 0
+      &-item
+        font-size: 12px
+        line-height: normal
+        letter-spacing: -0.012px
 @media screen and (max-width: 615px)
   .slogan
     &__text
@@ -305,7 +320,7 @@
       bottom: 53px
       width: 60px
   .title
-    font-size: 36px
+    font-size: 24px
     font-weight: 400
     line-height: normal
     letter-spacing: -0.456px
@@ -340,6 +355,73 @@
     &__tabs
       &-link
         padding: 4px 10px
+  .tickets
+    &__content
+      padding: 19px 45px 22px 45px
+    &__card
+      display: flex
+      flex-direction: column
+      border: 2px solid #ffffff
+      height: 590px
+      &-title
+        font-size: 24px
+      &-header
+        border-bottom: 2px solid #ffffff
+        &--special
+          &::before, &::after
+            width: 24px
+            height: 100%
+      &-body
+        padding: 32px 22px 36px 22px
+        max-height: unset
+      &-item
+        list-style-image: unset
+        list-style: none
+        display: flex
+        align-items: baseline
+        padding-left: 0
+        &::before
+          content: ''
+          display: inline-block
+          min-width: 8px
+          min-height: 8px
+          background-color: #ffffff
+          margin-right: 14px
+        &.disabled
+          list-style-image: unset
+          list-style: none
+          &::before
+            background-color: transparent
+            border: 1px solid #ffffff
+      &-price
+        width: 43px
+        height: 36px
+    &__cards
+      margin-bottom: 28px
+    &__slogan
+      font-size: 16px
+      font-weight: 400
+      line-height: 150%
+      letter-spacing: -0.352px
+      margin-bottom: 13px
+    &__limit
+      font-size: 12px
+      line-height: 150%
+      letter-spacing: -0.264px
+      text-transform: unset
+    &__animation
+      width: 16.911px
+      height: 18.04px
+    &__footer
+      width: 48.8%
+      height: 62px
+      bottom: -37px
+  .button
+    font-size: 15px
+    font-weight: 500
+    line-height: normal
+    letter-spacing: -0.24px
+    padding: 15px 30px
 // Media queries for hover and active elements on wide monitors
 @media screen and (min-width: 620px) 
   .header

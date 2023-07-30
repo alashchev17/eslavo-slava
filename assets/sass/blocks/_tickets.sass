@@ -41,6 +41,23 @@
       border-bottom: 3px solid white
       &--special
         justify-content: space-between
+        &::before
+          content: ''
+          background-image: url("../images/icons/vip-ticket.svg")
+          background-repeat: no-repeat
+          transform: scale(-1, 1)
+          background-position: center center
+          background-size: cover
+          width: 32px
+          height: 96px
+        &::after
+          content: ''
+          background-image: url("../images/icons/vip-ticket.svg")
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          width: 32px
+          height: 96px
     &-title
       font-size: 36px
       font-style: normal
