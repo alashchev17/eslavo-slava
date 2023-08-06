@@ -5,9 +5,13 @@
   font-family: 'Source Code Pro', monospace
   &__logo
     display: inline-block
-    min-width: 181px
-    width: 181px
-    height: 48px
+    min-width: 190px
+    width: 190px
+    height: 43px
+    background-image: url("../images/icons/footer-logo.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
   &__wrapper
     display: flex
     flex-direction: column
@@ -35,18 +39,25 @@
       line-height: 150%
       letter-spacing: -0.54px
       text-transform: uppercase
+    &--policy
+      text-decoration: underline
   &__block
     width: 100%
     display: flex
     align-items: center
     justify-content: space-between
-  &__column
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 5px
+      &:nth-child(3)
+        align-items: flex-end
+  &__numbers
     display: flex
     flex-direction: column
     align-items: flex-start
     gap: 5px
-    &:nth-child(3)
-      align-items: flex-end
   &__year
     color: $third-accent-color
     font-size: 20px
