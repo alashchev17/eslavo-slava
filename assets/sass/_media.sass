@@ -114,6 +114,32 @@
       width: 148px
 // Media queries for tablets <768px
 @media screen and (max-width: 768px)
+  .input
+    padding: 20px 13px
+    font-size: 16px
+    font-weight: 400
+    line-height: 17px
+    letter-spacing: -0.016px
+    border: 2px solid #ffffff
+  .checkbox
+    gap: 16px
+    &__label
+      width: 16px
+      height: 16px
+      padding: unset
+      border: 2px solid #ffffff
+      &-item
+        width: 8px
+        height: 8px
+      &--active
+        .checkbox__label-item
+          background: rgba(#ffffff, 0.25) no-repeat center center
+  .button
+    font-size: 15px
+    font-weight: 500
+    line-height: normal
+    letter-spacing: -0.24px
+    padding: 15px 30px
   .title
     font-size: 36px
   .container
@@ -320,16 +346,21 @@
     &__form
       &-inputs
         flex-direction: column
+        gap: 16px
         width: 100%
+      &-checkbox
+        margin-bottom: 40px
     &__input
       flex-basis: unset
       width: 100%
-  .button
-    font-size: 15px
-    font-weight: 500
-    line-height: normal
-    letter-spacing: -0.24px
-    padding: 15px 30px
+    &__info
+      font-size: 11px
+      font-weight: 400
+      line-height: 17px
+      letter-spacing: -0.011px
+    &__button
+      padding: 15px 56px
+  
 @media screen and (max-width: 615px)
   .hero
     height: 700px
@@ -430,6 +461,12 @@
         height: 100%
 // Media queries for phones <420px
 @media screen and (max-width: 420px)
+  .button
+    font-size: 15px
+    font-weight: 500
+    line-height: normal
+    letter-spacing: -0.24px
+    padding: 15px 30px
   .slogan
     &__text
       font-size: 33px
@@ -560,12 +597,9 @@
       min-width: 134.402px
       width: 134.402px
       height: 31.302px
-  .button
-    font-size: 15px
-    font-weight: 500
-    line-height: normal
-    letter-spacing: -0.24px
-    padding: 15px 30px
+  .contacts
+    &__button
+      padding: 15px 56px
 // Media queries for hover and active elements on wide monitors
 @media screen and (min-width: 620px) 
   .header
