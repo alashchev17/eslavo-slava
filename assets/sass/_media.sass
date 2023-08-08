@@ -53,6 +53,8 @@
   .location
     &__block
       flex-direction: column
+    &__link
+      display: flex
     &__slider
       min-width: unset
       max-width: 100%
@@ -340,6 +342,52 @@
       width: 48.8%
       height: 62px
       bottom: -37px
+  .location
+    &__slider
+      height: 350px
+    &__content
+      justify-content: unset
+      padding: 19px 19px 0 18px
+      border-left: 3px solid #ffffff
+      border-right: 3px solid #ffffff
+      border-bottom: 3px solid #ffffff
+      &.active
+        padding: 19px 19px 17px 18px
+      &-title
+        font-size: 20px
+        font-weight: 400
+        line-height: 150%
+        letter-spacing: -0.38px
+        margin-bottom: 21px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &::after
+          content: ''
+          display: inline-block
+          width: 17px
+          height: 11px
+          background-image: url("../images/icons/triangle.svg")
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          transition: transform 0.3s ease-in-out
+        &.active
+          &::after
+            transform: rotate(180deg)
+      &-subtitle
+        font-size: 14px
+        margin-bottom: 0
+      &-wrapper
+        display: grid
+        grid-template-rows: 0fr
+        transition: grid-template-rows 0.3s ease-in-out
+        overflow: hidden
+        margin-top: 17px
+        &-block
+          min-height: 0
+        &.active
+          grid-template-rows: 1fr
   .contacts
     padding: 63px 0 105px 0
     &__container
@@ -373,6 +421,31 @@
     &__icon
       bottom: 133px
       width: 110px
+  .location
+    &__row
+      align-items: flex-start
+    &__slider
+      height: 260px
+      &-button
+        width: 28px!important
+        height: 28px!important
+        padding: 0
+        border: 1px solid #ffffff
+        &::after
+          width: 10.546px
+          height: 18.82px
+        &--next
+          right: 10px
+        &--prev
+          left: 10px
+      &-pagination
+        bottom: 13px !important
+  .swiper-pagination-bullet
+    width: 5.5px
+    height: 6px
+    border: 0.95px solid #ffffff
+    &:not(:last-child)
+      margin: 0 10.5px 0 0 !important
   .footer
     &__wrapper
       align-items: center

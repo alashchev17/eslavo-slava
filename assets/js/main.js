@@ -189,6 +189,16 @@ aboutButton.addEventListener("click", event => {
     }
   });
 
+  const locationContent = document.querySelector(".location__content");
+  const locationContentTitle = document.querySelector(".location__content-title");
+  const locationWrapper = document.querySelector(".location__content-wrapper");
+
+  locationContentTitle.addEventListener("click", () => {
+    locationContent.classList.toggle("active");
+    locationContentTitle.classList.toggle("active");
+    locationWrapper.classList.toggle("active");
+  })
+
 /****************************** CONTACTS ******************************/
   
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
@@ -364,6 +374,33 @@ for (let anchor of anchors) {
     const blockID = anchor.getAttribute('href');
     console.log(blockID);
     const element = document.querySelector(blockID);
+    if (event.target.classList == "header__link" && headerNav.classList.contains("active")) {
+      setTimeout(() => {
+        headerNav.classList.remove("active");
+        document.body.classList.remove("overflow");
+        setTimeout(() => {
+          if (element !== null || blockID !== "#popup") {
+            if (blockID == "#about") {
+              TOP_OFFSET = -160;
+            } else if (blockID == "#tickets") {
+              element.scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+              });
+              return;
+            } else {
+              TOP_OFFSET = -94;
+            }
+            const y = element.getBoundingClientRect().top + window.pageYOffset + TOP_OFFSET;
+      
+            window.scrollTo({
+              top: y, 
+              behavior: 'smooth'
+            });
+          }
+        }, 1000);
+      }, 100);
+    }
     if (element !== null || blockID !== "#popup") {
       if (blockID == "#about") {
         TOP_OFFSET = -160;
