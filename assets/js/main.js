@@ -313,7 +313,7 @@ arrayArtistsCardsDesktop.sort((a, b) => {
 
 const getData = async () => {
   // const data = await fetch('http://localhost:5500/assets/js/artists.json');
-  const data = await fetch('http://alashchev17.github.io/eslavo-slava/assets/js/artists.json');
+  const data = await fetch('https://alashchev17.github.io/eslavo-slava/assets/js/artists.json');
   // const data = await fetch('http://justmaig.beget.tech/assets/js/artists.json');
   
   if (data.ok) {
