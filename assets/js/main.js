@@ -159,9 +159,19 @@ aboutButton.addEventListener("click", event => {
 
 /****************************** ARTISTS ******************************/
 
-  const fullCards = [].slice.call(document.querySelectorAll(".artists__cards-item--full"));
+  const fullCardsDesktop = [].slice.call(document.querySelector(".artists__cards.desktop").querySelectorAll(".artists__cards-item--full"));
+  const fullCardsMobile = [].slice.call(document.querySelector(".artists__cards.mobile").querySelectorAll(".artists__cards-item--full"));
 
-  fullCards.forEach(item => {
+  fullCardsDesktop.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      item.childNodes[3].classList.add("active");
+    });
+    item.addEventListener("mouseleave", () => {
+      item.childNodes[3].classList.remove("active");
+    });
+  });
+
+  fullCardsMobile.forEach(item => {
     item.addEventListener("mouseenter", () => {
       item.childNodes[3].classList.add("active");
     });
@@ -302,7 +312,9 @@ arrayArtistsCardsDesktop.sort((a, b) => {
 
 
 const getData = async () => {
-  const data = await fetch('https://alashchev17.github.io/eslavo-slava/assets/js/artists.json');
+  // const data = await fetch('http://localhost:5500/assets/js/artists.json');
+  const data = await fetch('http://alashchev17.github.io/eslavo-slava/assets/js/artists.json');
+  // const data = await fetch('http://justmaig.beget.tech/assets/js/artists.json');
   
   if (data.ok) {
     return data.json();
@@ -320,7 +332,7 @@ arrayArtistsCardsDesktop.forEach((item, index) => {
           popupTitle.textContent = data.artists[index].name;
           popupText.innerHTML = data.artists[index].description;
           popupImage.src = data.artists[index].photo;
-          popupDate.textContent = data.artists[index].date;
+          popupDate.innerHTML = data.artists[index].date;
           popupPage.textContent = data.artists[index].page;
         })
         .catch(err => {
@@ -366,7 +378,7 @@ document.addEventListener("keydown", event => {
 });
 
 
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+const anchors = [].slice.call(document.querySelectorAll('a[href^="#"]'));
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (event) {
