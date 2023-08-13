@@ -17,11 +17,7 @@ if (window.innerWidth > 475) {
 }
 
 const getData = async () => {
-  // const data = await fetch('http://localhost:5500/assets/js/artists.json');
-  // const data = await fetch('http://192.168.43.71:3000/assets/js/artists.json');
   const data = await fetch('https://alashchev17.github.io/eslavo-slava/assets/js/artists.json');
-  // const data = await fetch('http://justmaig.beget.tech/assets/js/artists.json');
-  
   if (data.ok) {
     return data.json();
   } else {
