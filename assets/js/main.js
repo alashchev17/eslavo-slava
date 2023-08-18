@@ -144,8 +144,7 @@ aboutButton.addEventListener("click", event => {
         lineUpCardsDescs[index].classList.toggle("active");
         lineUpCardsDescs[index].classList.toggle("hidden");
         setTimeout(() => {
-          lineUpCardsDescs[index].classList.toggle("dnone")
-          
+          lineUpCardsDescs[index].classList.toggle("dnone");
         }, 300);
       } else {
         lineUpCardsDescs[index].classList.toggle("dnone")
