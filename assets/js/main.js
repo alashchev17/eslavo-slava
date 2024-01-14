@@ -236,7 +236,7 @@ window.onload = () => {
               opacity: 0,
               duration: 1.6,
             },
-            '<10%'
+            '<50%'
           )
           .from(
             '.tickets__card--third',
@@ -245,7 +245,7 @@ window.onload = () => {
               opacity: 0,
               duration: 1.6,
             },
-            '<25%'
+            '<75%'
           )
           .from(
             '.tickets__card--second',
@@ -254,7 +254,7 @@ window.onload = () => {
               opacity: 0,
               duration: 1.6,
             },
-            '<50%'
+            '>'
           )
           .from(
             SplitText.create('.tickets__slogan', { type: 'chars, words' })
