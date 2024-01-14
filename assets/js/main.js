@@ -101,18 +101,14 @@ window.onload = () => {
           })
         // About animation
         aboutTl
-          .fromTo(
+          .from(
             SplitText.create('.about__title', { type: 'words, chars' }).chars,
             {
               opacity: 0,
               y: -15,
-            },
-            {
-              duration: 1.6,
-              y: 0,
-              opacity: 1,
+              duration: 0.3,
               ease: 'power3.out',
-              stagger: 0.15,
+              stagger: 0.08,
             }
           )
           .fromTo(
@@ -121,11 +117,22 @@ window.onload = () => {
               scaleY: 0,
             },
             {
-              duration: 1.6,
+              duration: 0.5,
               scaleY: 1,
               ease: 'power3.out',
             },
-            '<25%'
+            '<50%'
+          )
+          .from(
+            SplitText.create('.about__desc', { type: 'words, chars' }).words,
+            {
+              opacity: 0,
+              y: -5,
+              duration: 0.15,
+              ease: 'power3.out',
+              stagger: 0.025,
+            },
+            '<'
           )
 
         ScrollTrigger.create({
@@ -141,8 +148,8 @@ window.onload = () => {
             {
               y: -15,
               opacity: 0,
-              stagger: 0.15,
-              duration: 1.6,
+              stagger: 0.08,
+              duration: 0.5,
             }
           )
           .from(
@@ -150,8 +157,8 @@ window.onload = () => {
             {
               y: -35,
               opacity: 0,
-              stagger: 0.2,
-              duration: 1.2,
+              stagger: 0.08,
+              duration: 0.5,
             },
             '<15%'
           )
@@ -169,8 +176,8 @@ window.onload = () => {
             {
               y: -15,
               opacity: 0,
-              stagger: 0.15,
-              duration: 1.6,
+              stagger: 0.08,
+              duration: 0.5,
             },
             '<'
           )
@@ -179,7 +186,7 @@ window.onload = () => {
             {
               x: 15,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.5,
             },
             '<25%'
           )
@@ -188,7 +195,7 @@ window.onload = () => {
             {
               y: 50,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.5,
             },
             '<25%'
           )
@@ -197,8 +204,8 @@ window.onload = () => {
             {
               x: 50,
               opacity: 0,
-              duration: 1.6,
-              stagger: 0.25,
+              duration: 0.5,
+              stagger: 0.1,
             },
             '<65%'
           )
@@ -207,7 +214,7 @@ window.onload = () => {
             {
               x: -50,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.5,
             },
             '<'
           )
@@ -225,8 +232,8 @@ window.onload = () => {
             {
               y: -15,
               opacity: 0,
-              duration: 1.6,
-              stagger: 0.15,
+              duration: 0.5,
+              stagger: 0.08,
             }
           )
           .from(
@@ -234,25 +241,31 @@ window.onload = () => {
             {
               x: -50,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.5,
+              ease: 'power3.out',
+              autoAlpha: 0,
             },
-            '<50%'
+            '>10%'
           )
           .from(
             '.tickets__card--third',
             {
               x: 50,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.5,
+              ease: 'power3.out',
+              autoAlpha: 0,
             },
-            '<75%'
+            '>25%'
           )
           .from(
             '.tickets__card--second',
             {
               y: -50,
               opacity: 0,
-              duration: 1.6,
+              duration: 0.75,
+              ease: 'power3.out',
+              autoAlpha: 0,
             },
             '>'
           )
@@ -263,8 +276,8 @@ window.onload = () => {
               y: -15,
               opacity: 0,
               ease: 'power3.out',
-              duration: 1.3,
-              stagger: 0.05,
+              duration: 0.5,
+              stagger: 0.08,
             },
             '>'
           )
@@ -274,8 +287,8 @@ window.onload = () => {
               y: -5,
               opacity: 0,
               ease: 'power3.out',
-              duration: 1.6,
-              stagger: 0.1,
+              duration: 0.3,
+              stagger: 0.05,
             },
             '>5%'
           )
@@ -283,6 +296,158 @@ window.onload = () => {
           animation: ticketsTl,
           trigger: '.tickets',
           start: 'top 95%',
+          toggleActions: 'play pause resume reset',
+        })
+        // Location animation
+        locationTl
+          .from(
+            SplitText.create('.location__title', { type: 'chars, words' })
+              .chars,
+            {
+              y: -15,
+              opacity: 0,
+              duration: 0.5,
+              stagger: 0.08,
+            }
+          )
+          .from(
+            '.location__slider',
+            {
+              x: -50,
+              opacity: 0,
+              duration: 0.5,
+            },
+            '<90%'
+          )
+          .from(
+            '.location__content',
+            {
+              x: 50,
+              opacity: 0,
+              duration: 0.5,
+            },
+            '<75%'
+          )
+          .from(
+            SplitText.create('.location__content-title', {
+              type: 'words, chars',
+            }).chars,
+            {
+              y: -10,
+              opacity: 0,
+              duration: 0.5,
+              stagger: 0.025,
+            },
+            '<80%'
+          )
+          .from(
+            SplitText.create('.location__content-subtitle', {
+              type: 'words, chars',
+            }).chars,
+            {
+              y: -5,
+              opacity: 0,
+              duration: 0.5,
+              stagger: 0.025,
+            },
+            '<80%'
+          )
+          .from(
+            SplitText.create('.location__content-desc', {
+              type: 'words, chars',
+            }).chars,
+            {
+              y: -3,
+              opacity: 0,
+              duration: 0.05,
+              stagger: 0.015,
+            },
+            '<80%'
+          )
+          .from(
+            '.location__content-button',
+            {
+              x: 30,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.in',
+            },
+            '<90%'
+          )
+
+        ScrollTrigger.create({
+          animation: locationTl,
+          trigger: '.location',
+          start: 'top 90%',
+          toggleActions: 'play pause resume reset',
+        })
+        // Contacts animation
+        contactsTl
+          .from(
+            SplitText.create('.contacts__title', { type: 'words, chars' })
+              .chars,
+            {
+              y: -15,
+              opacity: 0,
+              duration: 0.5,
+              stagger: 0.08,
+            }
+          )
+          .from(
+            '.contacts__input--name',
+            {
+              x: -15,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+            },
+            '<75%'
+          )
+          .from(
+            '.contacts__input--email',
+            {
+              x: 15,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+            },
+            '<95%'
+          )
+          .from(
+            '.contacts__input--textarea',
+            {
+              y: 30,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+            },
+            '<95%'
+          )
+          .from(
+            '.contacts__form-checkbox',
+            {
+              x: -50,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+            },
+            '<95%'
+          )
+          .from(
+            '.contacts__button',
+            {
+              y: 20,
+              opacity: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+            },
+            '<95%'
+          )
+
+        ScrollTrigger.create({
+          animation: contactsTl,
+          trigger: '.contacts',
+          start: 'top 90%',
           toggleActions: 'play pause resume reset',
         })
 

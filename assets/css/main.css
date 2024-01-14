@@ -166,7 +166,7 @@ input, textarea {
   font-weight: 400;
   line-height: 125%;
   letter-spacing: -0.02px;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 .input::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -204,7 +204,7 @@ input, textarea {
   width: 100%;
   height: 100%;
   background: transparent;
-  transition: background-color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 .checkbox__label--active .checkbox__label-item {
   background: #ffffff no-repeat center center;
@@ -855,7 +855,7 @@ input, textarea {
   bottom: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   background: linear-gradient(180deg, rgba(1, 0, 70, 0) 0%, #010046 100%);
 }
 .artists__cards-item--full .artists__cards-content.active {
@@ -2412,7 +2412,7 @@ input, textarea {
     background-color: rgba(255, 255, 255, 0.15);
   }
   .line-up__tabs-link {
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
   .line-up__tabs-link.active:hover {
     background-color: #fff;
@@ -2421,7 +2421,7 @@ input, textarea {
     background-color: rgba(255, 255, 255, 0.15);
   }
   .button {
-    transition: all 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   .button:hover {
     border-color: #FFC294;
@@ -2440,10 +2440,10 @@ input, textarea {
     color: grey;
   }
   .artists__cards-item--full {
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background 0.3s ease-in-out;
   }
   .location__content-button {
-    transition: all 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   .location__content-button:hover {
     border-color: #ffffff;

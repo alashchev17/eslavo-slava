@@ -730,14 +730,14 @@
         background-color: rgba(255, 255, 255, 0.15)
     &__tabs
       &-link
-        transition: all 0.3s ease-in-out
+        transition: background-color 0.3s ease-in-out
         &.active
           &:hover
             background-color: #fff
         &:hover
           background-color: rgba(255, 255, 255, 0.15)
   .button
-    transition: all 0.3s ease-in-out
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out
     &:hover
       border-color: $fourth-accent-color
     &:active
@@ -754,11 +754,11 @@
     &__cards
       &-item
         &--full
-          transition: all 0.3s ease-in-out
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background 0.3s ease-in-out
   .location
     &__content
       &-button
-        transition: all 0.3s ease-in-out
+        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out
         &:hover
           border-color: #ffffff
         &:active
