@@ -182,13 +182,15 @@ window.onload = () => {
             '<'
           )
           .from(
-            '.line-up__tabs',
+            '.line-up__tabs-link',
             {
-              x: 15,
+              y: -15,
               opacity: 0,
               duration: 0.5,
+              stagger: 0.3,
+              ease: 'power3.out',
             },
-            '<25%'
+            '<90%'
           )
           .from(
             '.line-up__body',
