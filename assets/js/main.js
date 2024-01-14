@@ -263,8 +263,8 @@ window.onload = () => {
               y: -15,
               opacity: 0,
               ease: 'power3.out',
-              duration: 2,
-              stagger: 0.15,
+              duration: 1.3,
+              stagger: 0.05,
             },
             '>'
           )
