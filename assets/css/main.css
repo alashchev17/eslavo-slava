@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 body {
   position: relative;
   background-color: #6359B8;
